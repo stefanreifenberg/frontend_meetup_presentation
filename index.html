@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Three.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/dracula.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+			  <!-- Slide 1: Title -->
+			  <section>
+				<h1>Three.js & WebGL</h1>
+				<p>Ein Einstieg in 3D-Grafik im Browser</p>
+				<p><strong>Stefan Reifenberg</strong></p>
+			  </section>
+
+			  <!-- Slide 2: Was ist WebGL? -->
+			  <section data-background-iframe="https://stefanreifenberg.com" data-background-interactive>
+				<h2>Über mich</h2>
+				
+			  </section>
+
+			  <!-- Slide 2: Was ist WebGL? -->
+			  <section>
+				<h2>Was ist WebGL?</h2>
+				<ul>
+				  <li>
+					<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API" target="_blank">				
+						API für hardwarebeschleunigte Grafik im Browser
+					</a>
+				  </li>
+				  <li>Unterstützt 2D- und 3D-Rendering</li>
+				  <li>Ermöglicht interaktive Anwendungen und Visualisierungen</li>
+				</ul>
+			  </section>
+
+			  <section data-background-iframe="https://bruno-simon.com/" data-background-interactive>
+				
+			  </section>
+
+			  <section data-background-iframe="https://cornrevolution.resn.global/#science" data-background-interactive>
+				
+			  </section>
+
+			  <section>
+				<h1>
+					<a href="https://lusion.co/" target="_blank">Lusion</a>
+					
+				</h1>
+			  </section>
+
+			  <section data-background-iframe="https://prior.co.jp/discover/en/ambition" data-background-interactive>
+				
+			  </section>
+
+			  <section data-background-iframe="https://chartogne-taillet.com/en" data-background-interactive>
+
+			  </section>
+
+			  <section data-background-iframe="https://freiburg-noise.vercel.app/" data-background-interactive>
+
+			  </section>
+			  
+			  <section data-background-iframe="https://three-satellites.vercel.app/" data-background-interactive>
+
+			  </section>
+
+			  <section data-background-iframe="https://www.datavizcubed.com/" data-background-interactive>
+
+			  </section>
+			  
+		
+			  <!-- Slide 3: Warum Three.js? -->
+			  <section>
+				<h2>Warum <a href="https://threejs.org/" target="_blank">Three.js?</a></h2>
+				<ul>
+				  <li>Abstrahiert die Komplexität von WebGL</li>
+				  <li>Einfache Syntax für komplexe 3D-Szenen</li>
+				  <li>Breite Community und viele Beispiele</li>
+				</ul>
+			  </section>
+		
+			  <!-- Slide 4: Grundkonzepte -->
+			  <section>
+				<h2>Grundkonzepte</h2>
+				<ul>
+				  <li><strong>Scene:</strong> Der Container für Objekte</li>
+				  <li><strong>Camera:</strong> Perspektive des Betrachters</li>
+				  <li><strong>Renderer:</strong> Zeichnet die Szene</li>
+				</ul>
+			  </section>
+		
+			  <!-- Slide 5: Demo - Rotierender Würfel -->
+			  <section>
+				<h2>Demo: Rotierender Würfel</h2>
+				<pre><code>
+		const scene = new THREE.Scene();
+		const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+		const renderer = new THREE.WebGLRenderer();
+		renderer.setSize(window.innerWidth, window.innerHeight);
+		document.body.appendChild(renderer.domElement);
+		
+		const geometry = new THREE.BoxGeometry();
+		const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+		const cube = new THREE.Mesh(geometry, material);
+		scene.add(cube);
+		
+		camera.position.z = 5;
+		function animate() {
+		  requestAnimationFrame(animate);
+		  cube.rotation.x += 0.01;
+		  cube.rotation.y += 0.01;
+		  renderer.render(scene, camera);
+		}
+		animate();
+				</code></pre>
+			  </section>
+		
+			  <!-- Slide 6: Erweiterte Funktionen -->
+			  <section>
+				<h2>Erweiterte Funktionen</h2>
+				<ul>
+				  <li>Interaktionen: Raycasting für Hover und Klick</li>
+				  <li>Animationen: Integration von gsap</li>
+				  <li>Externe Modelle: GLTF-Loader</li>
+				  <li>Post-Processing: Effekte wie Bloom und DOF</li>
+				</ul>
+			  </section>
+		
+			  <!-- Slide 7: Tipps & Tricks -->
+			  <section>
+				<h2>Tipps & Tricks</h2>
+				<ul>
+				  <li>Performance-Optimierung (Frustum Culling, LOD)</li>
+				  <li>Debugging-Tools (WebGL Inspector, drei.js GUI)</li>
+				  <li>Resourcen: Dokumentation, Beispiele auf CodePen</li>
+				</ul>
+			  </section>
+		
+			  <!-- Slide 8: Abschluss -->
+			  <section>
+				<h2>Vielen Dank!</h2>
+				<p>Fragen?</p>
+				<p>Kontakt: [Deine Kontaktdaten]</p>
+			  </section>
+			</div>
+		  </div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
