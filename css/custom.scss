@@ -1,0 +1,16 @@
+.threejscontent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; /* Space between image and text */
+  }
+  
+  .threejscontent img {
+    max-width: 40%; /* Adjust image size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Rounded corners */
+  }
+  
+  .threejscontent .text {
+    max-width: 55%; /* Adjust text width */
+  }
