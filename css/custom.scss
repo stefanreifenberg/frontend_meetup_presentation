@@ -14,3 +14,49 @@
   .threejscontent .text {
     max-width: 55%; /* Adjust text width */
   }
+
+  // Code section styles
+  .reveal .code-section {
+    .split-layout {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      height: 70vh;
+      padding: 0 2rem;
+      margin-top: 2rem;
+    }
+
+    .code-container {
+      flex: 1;
+      max-width: 60%;
+      pre {
+        font-size: 0.3em !important;
+        width: 100% !important;
+        display: block !important;
+        margin: 0 !important;
+        height: 100%;
+        overflow: auto;
+        border-radius: 8px;
+        line-height: 1.2;
+      }
+    }
+
+    .demo-container {
+      flex: 1;
+      max-width: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      border-radius: 8px;
+      padding: 1rem;
+      img {
+        max-height: 100%;
+        width: auto;
+        object-fit: contain;
+        display: block;
+        border-radius: 4px;
+      }
+    }
+  }
