@@ -141,7 +141,68 @@
 					</div>
 				</div>
 			  </section>
-		
+
+			  <section>
+				<h2 style="font-size: 1.8em;">Kameras in Three.js</h2>
+				<div class="split-layout" style="font-size: 0.8em;">
+					<div class="left-column">
+						<h3 style="font-size: 1.2em;">Haupttypen</h3>
+						<ul style="margin: 0;">
+							<li><strong>PerspectiveCamera:</strong> Realistische Perspektive</li>
+							<li><strong>OrthographicCamera:</strong> Technische Ansichten</li>
+						</ul>
+					</div>
+					<div class="right-column">
+						<h3 style="font-size: 1.2em;">Beispiel</h3>
+						<pre style="margin: 0;"><code style="font-size: 0.9em;">
+const camera = new THREE.PerspectiveCamera(
+    75,
+    window.innerWidth / window.innerHeight,
+    0.1,
+    1000
+);
+camera.position.z = 5;</code></pre>
+					</div>
+				</div>
+				<div class="tip-box" style="font-size: 0.8em; margin-top: 0.5em;">
+					<strong>💡 Tipp:</strong> Bei Resize: <code>camera.aspect = window.innerWidth / window.innerHeight; camera.updateProjectionMatrix();</code>
+				</div>
+			  </section>
+
+			  <section data-background-iframe="https://threejs.org/examples/webgl_camera.html" data-background-interactive>
+
+			  </section>
+
+			  <section>
+				<h2 style="font-size: 1.6em;">Geometrien in Three.js</h2>
+				<div class="split-layout" style="font-size: 0.7em;">
+					<div class="left-column">
+						<h3 style="font-size: 1.1em;">Grundformen</h3>
+						<ul style="margin: 0;">
+							<li><strong>BoxGeometry:</strong> Würfel/Quader</li>
+							<li><strong>SphereGeometry:</strong> Kugel</li>
+							<li><strong>CylinderGeometry:</strong> Zylinder</li>
+							<li><strong>PlaneGeometry:</strong> 2D-Fläche</li>
+							<li><strong>TorusGeometry:</strong> Donut</li>
+							<li><strong>BufferGeometry:</strong> Eigene Formen</li>
+						</ul>
+					</div>
+					<div class="right-column">
+						<h3 style="font-size: 1.1em;">Beispiel</h3>
+						<pre style="margin: 0;"><code style="font-size: 0.8em;">
+const geometry = new THREE.SphereGeometry(1, 32, 32);
+const material = new THREE.MeshStandardMaterial({ 
+    color: 0x0077ff 
+});
+const mesh = new THREE.Mesh(geometry, material);
+scene.add(mesh);</code></pre>
+					</div>
+				</div>
+				<div class="tip-box" style="font-size: 0.7em; margin-top: 0.3em;">
+					<strong>💡 Tipp:</strong> Geometrien können mit verschiedenen Materialien kombiniert werden
+				</div>
+			  </section>
+
 			  <!-- Slide 6: Erweiterte Funktionen -->
 			  <section>
 				<h2>Erweiterte Funktionen</h2>
@@ -152,7 +213,16 @@
 				  <li>Post-Processing: Effekte wie Bloom und DOF</li>
 				</ul>
 			  </section>
-		
+
+			  <!-- Slide 7: Frameworks -->
+			  <section>
+				<h2>Three.js + Frameworks</h2>
+				<h3>React - <a href="https://r3f.docs.pmnd.rs/getting-started/introduction" target="_blank">react-three-fiber</a></h3>
+				<h3>Svelte - <a href="https://threlte.xyz/" target="_blank">threlte</a></h3>
+				<h3>Vue - <a href="https://tresjs.org/" target="_blank">tresjs</a></h3>
+				<h3>Angular - <a href="https://angularthree.org/" target="_blank">angular-three</a></h3>
+			  </section>
+
 			  <!-- Slide 7: Tipps & Tricks -->
 			  <section>
 				<h2>Tipps & Tricks</h2>
