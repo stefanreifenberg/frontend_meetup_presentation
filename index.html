@@ -198,8 +198,90 @@ const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);</code></pre>
 					</div>
 				</div>
+			
+			  </section>
+
+			  <section>
+				<h2 style="font-size: 1.6em;">Materialien in Three.js</h2>
+				<div class="split-layout" style="font-size: 0.7em;">
+					<div class="left-column">
+						<h3 style="font-size: 1.1em;">Häufig verwendete Materialien</h3>
+						<ul style="margin: 0;">
+							<li><strong>MeshBasicMaterial:</strong> Einfach, kein Licht</li>
+							<li><strong><a href="https://threejs.org/docs/scenes/material-browser.html#MeshStandardMaterial" target="_blank">MeshStandardMaterial:</a></strong> Physikalisch basiert</li>
+							<li><strong>MeshPhongMaterial:</strong> Glänzend</li>
+							<li><strong>MeshLambertMaterial:</strong> Weich, matt</li>
+							<li><strong>MeshNormalMaterial:</strong> Debug-Normalen</li>
+						</ul>
+					</div>
+					<div class="right-column">
+						<h3 style="font-size: 1.1em;">Beispiel</h3>
+						<pre style="margin: 0;"><code style="font-size: 0.8em;">
+						const material = new THREE.MeshStandardMaterial({
+							color: 0xff6600,
+							metalness: 0.5,
+							roughness: 0.4
+						});
+						const mesh = new THREE.Mesh(geometry, material);
+						scene.add(mesh);</code></pre>
+					</div>
+				</div>
 				<div class="tip-box" style="font-size: 0.7em; margin-top: 0.3em;">
-					<strong>💡 Tipp:</strong> Geometrien können mit verschiedenen Materialien kombiniert werden
+					<strong>💡 Tipp:</strong> Materialien können Farbe, Texturen, Transparenz, Metalness und Roughness enthalten
+				</div>
+			  </section>
+
+			  <section>
+				<h2 style="font-size: 1.6em;">Licht in Three.js</h2>
+				<div class="split-layout" style="font-size: 0.7em;">
+					<div class="left-column">
+						<p>Verschiedene Lichtquellen sorgen für realistische Ausleuchtung der Szene:</p>
+					</div>
+					<div class="right-column">
+						<ul>
+				<ul>
+				  <li><strong>AmbientLight:</strong> Gleichmäßige Grundbeleuchtung</li>
+				  <li><strong>DirectionalLight:</strong> Licht mit Richtung (wie Sonne)</li>
+				  <li><strong>PointLight:</strong> Punktförmige Lichtquelle (wie Glühbirne)</li>
+				  <li><strong>SpotLight:</strong> Lichtkegel mit Schatten (wie Taschenlampe)</li>
+							<li><strong>HemisphereLight:</strong> Kombination aus Himmels- und Bodenlicht</li>
+						</ul>
+					</div>
+				</div>
+			  
+				<pre><code>
+			  const light = new THREE.DirectionalLight(0xffffff, 1);
+			  light.position.set(5, 10, 7.5);
+			  scene.add(light);
+				</code></pre>
+			  </section>
+
+			  <section>
+				<h2 style="font-size: 1.6em;">Schatten in Three.js</h2>
+				<div class="split-layout" style="font-size: 0.7em;">
+					<div class="left-column">
+						<p>Für realistische Szenen können Objekte Schatten werfen und empfangen:</p>
+						<ul style="margin: 0;">
+							<li><code>renderer.shadowMap.enabled = true;</code></li>
+							<li>Nur bestimmte Lichtquellen unterstützen Schatten: <code>DirectionalLight</code>, <code>SpotLight</code></li>
+							<li>Mesh muss <code>castShadow</code> bzw. <code>receiveShadow</code> aktiviert haben</li>
+						</ul>
+					</div>
+					<div class="right-column">
+						<pre style="margin: 0;"><code style="font-size: 0.8em;">
+// Aktivieren im Renderer
+renderer.shadowMap.enabled = true;
+
+// Lichtquelle
+light.castShadow = true;
+
+// Objekte
+mesh.castShadow = true;
+mesh.receiveShadow = true;</code></pre>
+					</div>
+				</div>
+				<div class="tip-box" style="font-size: 0.7em; margin-top: 0.3em;">
+					<strong>Hinweis:</strong> Schatten können performanceintensiv sein – Auflösung & Kamera begrenzen!
 				</div>
 			  </section>
 
@@ -257,3 +339,4 @@ scene.add(mesh);</code></pre>
 		</script>
 	</body>
 </html>
+
