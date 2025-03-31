@@ -17,21 +17,22 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
+				<!-- Slide 1: Intro -->
 				<section data-background-iframe="https://frontend-meetup-intro.vercel.app/" data-background-interactive>
 				
 				</section>
-			  <!-- Slide 1: Title -->
+			  <!-- Slide 2: Title -->
 			  <section>
 				<h1>Three.js & WebGL</h1>
 			  </section>
 
-			  <!-- Slide 2: Was ist WebGL? -->
+			  <!-- Slide 3: Was ist WebGL? -->
 			  <section data-background-iframe="https://stefanreifenberg.com" data-background-interactive>
 				<h2>Über mich</h2>
 				
 			  </section>
 
-			  <!-- Slide 2: Was ist WebGL? -->
+			  <!-- Slide 4: Was ist WebGL? -->
 			  <section>
 				<h2>Was ist WebGL?</h2>
 				<ul>
@@ -45,8 +46,7 @@
 				</ul>
 			  </section>
 
-			  <!-- Slide 2: Was ist WebGL? -->
-			   <!-- Slide 3: Warum Three.js? -->
+			  <!-- Slide 5: Warum Three.js? -->
 			  <section>
 				<h2><a href="https://threejs.org/" target="_blank">Three.js</a> to the rescue</h2>
 				<div class="threejscontent">					
@@ -94,7 +94,7 @@
 
 			  </section>
 		
-			  <!-- Slide 4: Grundkonzepte -->
+			  <!-- Slide 6: Grundkonzepte -->
 			  <section>
 				<h2>Grundkonzepte</h2>
 				<ul>
@@ -104,7 +104,7 @@
 				</ul>
 			  </section>
 		
-			  <!-- Slide 5: Demo - Rotierender Würfel -->
+			  	<!-- Slide 7: Demo - Rotierender Würfel -->
 			  <section class="code-section">
 				<h2>Demo: Rotierender Würfel</h2>
 				<div class="split-layout">
@@ -269,15 +269,15 @@ scene.add(mesh);</code></pre>
 					</div>
 					<div class="right-column">
 						<pre style="margin: 0;"><code style="font-size: 0.8em;">
-// Aktivieren im Renderer
-renderer.shadowMap.enabled = true;
+						// Aktivieren im Renderer
+						renderer.shadowMap.enabled = true;
 
-// Lichtquelle
-light.castShadow = true;
+						// Lichtquelle
+						light.castShadow = true;
 
-// Objekte
-mesh.castShadow = true;
-mesh.receiveShadow = true;</code></pre>
+						// Objekte
+						mesh.castShadow = true;
+						mesh.receiveShadow = true;</code></pre>
 					</div>
 				</div>
 				<div class="tip-box" style="font-size: 0.7em; margin-top: 0.3em;">
@@ -285,7 +285,7 @@ mesh.receiveShadow = true;</code></pre>
 				</div>
 			  </section>
 
-			  <!-- Slide 6: Erweiterte Funktionen -->
+			  <!-- Slide 8: Erweiterte Funktionen -->
 			  <section>
 				<h2>Erweiterte Funktionen</h2>
 				<ul>
@@ -296,7 +296,7 @@ mesh.receiveShadow = true;</code></pre>
 				</ul>
 			  </section>
 
-			  <!-- Slide 7: Frameworks -->
+			  <!-- Slide 9: Frameworks -->
 			  <section>
 				<h2>Three.js + Frameworks</h2>
 				<h3>React - <a href="https://r3f.docs.pmnd.rs/getting-started/introduction" target="_blank">react-three-fiber</a></h3>
@@ -305,7 +305,98 @@ mesh.receiveShadow = true;</code></pre>
 				<h3>Angular - <a href="https://angularthree.org/" target="_blank">angular-three</a></h3>
 			  </section>
 
-			  <!-- Slide 7: Tipps & Tricks -->
+			  <section>
+				<h2 style="font-size: 1.6em;">⚛️ @react-three/fiber</h2>
+				<div class="split-layout" style="font-size: 0.7em;">
+					<div class="left-column">
+						<p>React-Renderer für Three.js – bringt declarative Komponentenstruktur in die 3D-Welt</p>
+						<ul style="margin: 0;">
+							<li>Komponenten-basiertes 3D mit JSX statt imperative Three.js-API</li>
+							<li>Ersetzt den `WebGLRenderer`, verwaltet Kamera, Szene & Render-Loop</li>
+							<li>Kompatibel mit dem gesamten React-Ökosystem</li>
+						</ul>
+					</div>
+					<div class="right-column">
+						<pre style="margin: 0;">
+							<code style="font-size: 0.8em;">
+								import { Canvas } from '@react-three/fiber';
+
+								function Scene() {
+								return (
+									&lt;Canvas&gt;
+									&lt;mesh&gt;
+										&lt;boxGeometry /&gt;
+										&lt;meshStandardMaterial color="hotpink" /&gt;
+									&lt;/mesh&gt;
+									&lt;/Canvas&gt;
+								);
+								}
+							</code>
+						</pre>
+					</div>
+				</div>
+				<div class="tip-box" style="font-size: 0.7em; margin-top: 0.3em;">
+					<strong>→</strong> Ideal für React-Entwickler:innen, die mit Three.js arbeiten möchten
+				</div>
+			  </section>
+			  <section>
+				<h2 style="font-size: 1.6em;">🧰 @react-three/drei</h2>
+				<div class="split-layout" style="font-size: 0.7em;">
+					<div class="left-column">
+						<p>Hilfsbibliothek mit nützlichen Komponenten und Abkürzungen für react-three-fiber</p>
+						<ul style="margin: 0;">
+							<li><code>&lt;OrbitControls /&gt;</code>: Kamerasteuerung mit Maus</li>
+							<li><code>&lt;Environment /&gt;</code>: HDRI-Umgebung für realistische Beleuchtung</li>
+							<li><code>&lt;useGLTF /&gt;</code>: Einfaches Laden von 3D-Modellen</li>
+							<li><code>&lt;Text /&gt;</code>, <code>&lt;Stage /&gt;</code>, <code>&lt;ContactShadows /&gt;</code> und viele mehr</li>
+						</ul>
+					</div>
+					<div class="right-column">
+						<h3 style="font-size: 1.1em;">Beispiel</h3>
+						<pre style="margin: 0;"><code style="font-size: 0.8em;">
+import { OrbitControls, Environment, useGLTF } from '@react-three/drei';</code></pre>
+					</div>
+				</div>
+				<div class="tip-box" style="font-size: 0.7em; margin-top: 0.3em;">
+					<strong>→</strong> Spart viel Zeit & Boilerplate, besonders für Prototyping & Präsentationen
+				</div>
+			  </section>
+
+			  <section>
+				<h2 style="font-size: 1.6em;">🧪 Threlte</h2>
+				<div class="split-layout" style="font-size: 0.7em;">
+					<div class="left-column">
+						<p>Threlte ist ein komponentenbasiertes 3D-Toolkit für <strong>Svelte</strong>, inspiriert von <code>react-three-fiber</code>.</p>
+						<h3 style="font-size: 1.1em;">Highlights:</h3>
+						<ul style="margin: 0;">
+							<li>Declarative 3D-Szenen mit nativer Svelte-Syntax</li>
+							<li>Reaktive Props, Bindings und Stores</li>
+							<li>Modular aufgebaut – mit Canvas, Komponenten & Hooks</li>
+							<li>Optimiert für SvelteKit & SSR</li>
+						</ul>
+					</div>
+					<div class="right-column">
+						<pre style="margin: 0;"><code style="font-size: 0.8em;">
+&lt;script&gt;
+import { Canvas, T  } from '@threlte/core'
+&lt;/script&gt;
+
+&lt;Canvas&gt;
+  &lt;T.Mesh position={[0, 0, 0]}&gt;
+    &lt;T.BoxGeometry /&gt;
+    &lt;T.MeshStandardMaterial color="orange" /&gt;
+  &lt;/T.Mesh&gt;
+&lt;/Canvas&gt;</code></pre>
+					</div>
+				</div>
+				<div class="tip-box" style="font-size: 0.7em; margin-top: 0.3em;">
+					<strong>→</strong> Ideal für Svelte-Entwickler:innen, die in 3D einsteigen wollen
+				</div>
+			  </section>
+
+			  
+
+			  <!-- Slide 10: Tipps & Tricks -->
 			  <section>
 				<h2>Tipps & Tricks</h2>
 				<ul>
@@ -315,7 +406,7 @@ mesh.receiveShadow = true;</code></pre>
 				</ul>
 			  </section>
 		
-			  <!-- Slide 8: Abschluss -->
+			  <!-- Slide 11: Abschluss -->
 			  <section data-background-iframe="https://frontend-meetup-outro.vercel.app/" data-background-interactive>
 				
 			  </section>
