@@ -28,8 +28,6 @@
 
 			  <!-- Slide 3: Was ist WebGL? -->
 			  <section data-background-iframe="https://stefanreifenberg.com" data-background-interactive>
-				<h2>Über mich</h2>
-				
 			  </section>
 
 			  <!-- Slide 4: Was ist WebGL? -->
@@ -291,12 +289,24 @@ scene.add(mesh);</code></pre>
 
 			  <!-- Slide 8: Erweiterte Funktionen -->
 			  <section>
-				<h2>Erweiterte Funktionen</h2>
+				<h2>🚀 Erweiterte Funktionen</h2>
 				<ul>
-				  <li>Interaktionen: Raycasting für Hover und Klick</li>
-				  <li>Animationen: Integration von gsap</li>
-				  <li>Externe Modelle: GLTF-Loader</li>
-				  <li>Post-Processing: Effekte wie Bloom und DOF</li>
+				  <li>
+					<strong>🎯 Interaktionen:</strong><br>
+					Per <code>Raycaster</code> lassen sich Maus- und Touch-Events auf 3D-Objekte erkennen (Hover, Klick).
+				  </li>
+				  <li>
+					<strong>🎞️ Animationen:</strong><br>
+					Nutze <code>gsap</code> oder die Three.js eigene <code>AnimationMixer</code> für Objekt- und Kameraanimationen.
+				  </li>
+				  <li>
+					<strong>📦 Externe Modelle:</strong><br>
+					Lade realistische Assets mit dem <code>GLTFLoader</code>. GLB/GLTF ist der moderne Web-Standard für 3D-Modelle.
+				  </li>
+				  <li>
+					<strong>🎨 Post-Processing:</strong><br>
+					Effekte wie <em>Bloom</em>, <em>Depth of Field</em> oder <em>Outline</em> mit <code>EffectComposer</code> und <code>three/examples/jsm/postprocessing</code>.
+				  </li>
 				</ul>
 			  </section>
 
@@ -402,14 +412,45 @@ import { Canvas, T  } from '@threlte/core'
 
 			  <!-- Slide 10: Tipps & Tricks -->
 			  <section>
-				<h2>Tipps & Tricks</h2>
-				<ul>
-				  <li>Performance-Optimierung (Frustum Culling, LOD)</li>
-				  <li>Debugging-Tools (WebGL Inspector, drei.js GUI)</li>
-				  <li>Resourcen: Dokumentation, Beispiele auf CodePen</li>
-				</ul>
+				<h2 style="font-size: 1.6em;">Tipps & Tricks für Three.js</h2>
+				<div class="split-layout" style="font-size: 0.7em;">
+					<div class="left-column">
+						<ul style="margin: 0;">
+							<li><strong>Performance optimieren:</strong><br>
+							<a href="https://codesandbox.io/p/sandbox/perlin-cubes-r3f-perf-wtp9t?file=%2Fsrc%2FApp.js">r3f-perf</a> <br>
+							<a href="https://discoverthreejs.com/tips-and-tricks/">Performance Tips</a>
+							<li><strong>Debugging vereinfachen:</strong><br>
+							Mit Tools wie <code>stats.js</code>, <code>dat.GUI</code> oder <code><a href="https://github.com/pmndrs/leva">leva</a></code> kannst du Werte live ändern und Performance messen.</li>
+						</ul>
+					</div>
+					<div class="right-column">
+						<ul style="margin: 0;">
+							<li><strong>Code strukturiert halten:</strong><br>
+							Trenne Setup-Logik (Kamera, Szene, Licht) von dem, was dynamisch passiert (Animation, Interaktion).
+							</li>							
+						</ul>
+					</div>
+				</div>
 			  </section>
-		
+
+			  <section>
+				<h2 style="font-size: 1.6em;">Three.js lernen</h2>
+				<div class="split-layout" style="font-size: 0.7em;">
+					<div class="left-column">
+						<ul style="margin: 0;">
+							<li><strong>Kurse</strong><br>
+							<a href="https://threejs-journey.com/" target="_blank">three.js Journey</a> <br>
+							<a href="https://www.youtube.com/@robotbobby9" target="_blank">Robot Bobby</a>
+							<a href="https://www.youtube.com/@akella_" target="_blank">Yuri Artiukh</a>
+							<li><strong>Ressourcen</strong><br>
+							<a href="https://threejs.org/docs/" target="_blank">Three.js Doku</a> <br>
+							<a href="https://threejsresources.com/" target="_blank">threejsresources.com</a> <br>
+							<a href="https://discord.gg/Xg7KGcgG" target="_blank">three.js Discord</a>							
+						</ul>
+					</div>					
+				</div>
+			  </section>
+
 			  <!-- Slide 11: Abschluss -->
 			  <section data-background-iframe="https://frontend-meetup-outro.vercel.app/" data-background-interactive>
 				
