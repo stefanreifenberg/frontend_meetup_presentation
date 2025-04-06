@@ -23,7 +23,10 @@
 				</section>
 			  <!-- Slide 2: Title -->
 			  <section>
-				<h1>Three.js & WebGL</h1>
+				<h1>
+					<a href="https://threejs.org/" target="_blank">Three.js</a> & 
+					<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API" target="_blank">WebGL</a>
+				</h1>
 			  </section>
 
 			  <!-- Slide 3: Über mich -->
@@ -41,6 +44,11 @@
 				  </li>
 				  <li>Unterstützt 2D- und 3D-Rendering</li>
 				  <li>Ermöglicht interaktive Anwendungen und Visualisierungen</li>
+				  <li>
+					<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example" target="_blank">				
+						Allerdings ist es sehr komplex und schwer zu bedienen
+					</a>
+				  </li>
 				</ul>
 			  </section>
 
@@ -50,9 +58,10 @@
 				<div class="threejscontent">					
 					<img src="images/icon.svg" alt="three.js logo" style="max-width: 50%; height: auto;">
 					<ul>
-					<li>Abstrahiert die Komplexität von WebGL</li>
-					<li>Einfache Syntax für komplexe 3D-Szenen</li>
-					<li>Breite Community und viele Beispiele</li>
+						<li>Abstrahiert die Komplexität von WebGL</li>
+						<li>Einfache Syntax für komplexe 3D-Szenen</li>
+						<li>Breite Community und viele Beispiele</li>
+						<li>Viele Frameworks und Bibliotheken für fortgeschrittene Anwendungen</li>
 					</ul>
 				</div>
 			  </section>
@@ -96,7 +105,7 @@
 			  </section>
 
 			  <!-- Slide 13: Beispiele -->
-			  <section data-background-iframe="https://www.datavizcubed.com/" data-background-interactive>
+			  <section data-background-iframe="https://r3f-physics-omega.vercel.app/" data-background-interactive>
 
 			  </section>
 			
@@ -189,11 +198,11 @@ camera.position.z = 5;</code></pre>
 						<h3 style="font-size: 1.1em;">Grundformen</h3>
 						<ul style="margin: 0;">
 							<li><strong>BoxGeometry:</strong> Würfel/Quader</li>
-							<li><strong>SphereGeometry:</strong> Kugel</li>
+							<li><strong><a href="https://threejs.org/docs/scenes/geometry-browser.html#SphereGeometry">SphereGeometry:</a></strong> Kugel</li>
 							<li><strong>CylinderGeometry:</strong> Zylinder</li>
 							<li><strong>PlaneGeometry:</strong> 2D-Fläche</li>
 							<li><strong>TorusGeometry:</strong> Donut</li>
-							<li><strong>BufferGeometry:</strong> Eigene Formen</li>
+							<li><strong><a href="https://threejs.org/examples/#webgl_buffergeometry_rawshader">BufferGeometry:</a></strong> Eigene Formen</li>
 						</ul>
 					</div>
 					<div class="right-column">
@@ -306,10 +315,10 @@ scene.add(mesh);</code></pre>
 			  <section>
 				<h2>Erweiterte Funktionen</h2>
 				<ul style="font-size: 0.8em;">
-				  <li><strong>Interaktionen:</strong> <code>Raycaster</code> für Maus/Touch-Events</li>
-				  <li><strong>Animationen:</strong> <code>gsap</code> oder <code>AnimationMixer</code></li>
-				  <li><strong>Externe Modelle:</strong> <code>GLTFLoader</code> für GLB/GLTF Assets</li>
-				  <li><strong>Post-Processing:</strong> <code>EffectComposer</code> für Bloom, DoF, Outline</li>
+				  <li><strong>Interaktionen:</strong> <code><a href="https://threejs.org/examples/?q=raycas#webgl_instancing_raycast">Raycaster</a></code> für Maus/Touch-Events</li>
+				  <li><strong><a href="https://codesandbox.io/p/sandbox/2n98yj?file=%2Fsrc%2FApp.js">Animationen:s</a></strong> <code>gsap</code> oder <code>AnimationMixer</code></li>
+				  <li><strong>Externe Modelle:</strong> <code><a href="https://threejs.org/examples/?q=gltf#webgl_animation_keyframes"></a>GLTFLoader</a></code> für GLB/GLTF Assets</li>
+				  <li><strong><a href="https://codesandbox.io/p/sandbox/2ycs3?file=%2Fsrc%2Findex.js">Post-Processing:</a></strong> <code>EffectComposer</code> für Bloom, DoF, Outline</li>
 				</ul>
 			  </section>
 
@@ -324,7 +333,7 @@ scene.add(mesh);</code></pre>
 
 			  <!-- Slide 25: react-three-fiber -->
 			  <section>
-				<h2 style="font-size: 1.6em;">@react-three/fiber</h2>
+				<h2 style="font-size: 1.6em;"><a href="https://r3f.docs.pmnd.rs/getting-started/introduction" target="_blank">@react-three/fiber</a></h2>
 				<div class="split-layout" style="font-size: 0.7em;">
 					<div class="left-column">
 						<p>React-Renderer für Three.js – bringt declarative Komponentenstruktur in die 3D-Welt</p>
@@ -384,7 +393,7 @@ import { OrbitControls, Environment, useGLTF } from '@react-three/drei';</code><
 
 			  <!-- Slide 27: Threlte -->
 			  <section>
-				<h2 style="font-size: 1.6em;">Threlte</h2>
+				<h2 style="font-size: 1.6em;"><a href="https://threlte.xyz/" target="_blank">Threlte</a></h2>
 				<div class="split-layout" style="font-size: 0.7em;">
 					<div class="left-column">
 						<p>Threlte ist ein komponentenbasiertes 3D-Toolkit für <strong>Svelte</strong>, inspiriert von <code>react-three-fiber</code>.</p>
