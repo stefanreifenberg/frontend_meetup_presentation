@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Three.js</title>
+		<title>Three.js | Freiburg Meetup</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -193,9 +193,10 @@ const camera = new THREE.PerspectiveCamera(
 camera.position.z = 5;</code></pre>
 					</div>
 				</div>
-				<div class="tip-box" style="font-size: 0.8em; margin-top: 0.5em;">
-					<strong>💡 Tipp:</strong> Bei Resize: <code>camera.aspect = window.innerWidth / window.innerHeight; camera.updateProjectionMatrix();</code>
-				</div>
+			  </section>
+
+			  <section>
+				<img src="images/cameras.webp" alt="Kameras">
 			  </section>
 
 			  <!-- Slide 19: Kameras in Three.js Beispiel-->
@@ -289,6 +290,10 @@ scene.add(mesh);</code></pre>
 				</code></pre>
 			  </section>
 
+			  <section>
+				<img src="images/lights.webp" alt="Lights">
+			  </section>
+
 			  <!-- Slide 23: Schatten in Three.js -->
 			  <section>
 				<h2 style="font-size: 1.6em;">Schatten in Three.js</h2>
@@ -328,10 +333,10 @@ scene.add(mesh);</code></pre>
 			  <section>
 				<h2>Erweiterte Funktionen</h2>
 				<ul style="font-size: 0.8em;">
-				  <li><strong>Interaktionen:</strong> <code><a href="https://threejs.org/examples/?q=raycas#webgl_instancing_raycast">Raycaster</a></code> für Maus/Touch-Events</li>
-				  <li><strong><a href="https://codesandbox.io/p/sandbox/2n98yj?file=%2Fsrc%2FApp.js">Animationen:s</a></strong> <code>gsap</code> oder <code>AnimationMixer</code></li>
-				  <li><strong>Externe Modelle:</strong> <code><a href="https://threejs.org/examples/?q=gltf#webgl_animation_keyframes"></a>GLTFLoader</a></code> für GLB/GLTF Assets</li>
-				  <li><strong><a href="https://codesandbox.io/p/sandbox/2ycs3?file=%2Fsrc%2Findex.js">Post-Processing:</a></strong> <code>EffectComposer</code> für Bloom, DoF, Outline</li>
+				  <li><strong>Interaktionen:</strong> <code><a href="https://threejs.org/examples/?q=raycas#webgl_instancing_raycast" target="_blank">Raycaster</a></code> für Maus/Touch-Events</li>
+				  <li><strong><a href="https://codesandbox.io/p/sandbox/2n98yj?file=%2Fsrc%2FApp.js" target="_blank">Animationen</a></strong> <code>gsap</code> oder <code>AnimationMixer</code></li>
+				  <li><strong>Externe Modelle:</strong> <code><a href="https://threejs.org/examples/?q=gltf#webgl_animation_keyframes" target="_blank">GLTFLoader</a></code> für GLB/GLTF Assets</li>
+				  <li><strong><a href="https://pmndrs.github.io/postprocessing/public/demo/#depth-of-field" target="_blank">Post-Processing:</a></strong> <code>EffectComposer</code> für Bloom, DoF, Outline</li>
 				</ul>
 			  </section>
 
