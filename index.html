@@ -1,503 +1,499 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Three.js | Freiburg Meetup</title>
+		<title>Dataviz | Freiburg Meetup</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/custom.css">
 		<link rel="stylesheet" href="dist/theme/dracula.css">
-
-		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<!-- Slide 1: Intro -->
-				<section data-background-iframe="https://frontend-meetup-intro.vercel.app/" data-background-interactive>
-				
+
+				<!-- =====================================================
+				     INTRO
+				     ===================================================== -->
+
+				<section>
+					<h1>Datenvisualisierung im Web</h1>
+					<p style="color: #6272a4;">Freiburg Frontend Meetup</p>
+					<aside class="notes">
+						Herzlich willkommen! Heute nehme ich euch mit in die Welt der Datenvisualisierung im Browser.
+					</aside>
 				</section>
-			  <!-- Slide 2: Title -->
-			  <section>
-				<h1>
-					<a href="https://threejs.org/" target="_blank">Three.js</a> & 
-					<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API" target="_blank">WebGL</a>
-				</h1>
-			  </section>
 
-			  <!-- Slide 3: Über mich -->
-			  <section data-background-iframe="https://stefanreifenberg.com" data-background-interactive>
-			  </section>
+				<section data-background-iframe="https://stefanreifenberg.com" data-background-interactive>
+					<aside class="notes">
+						Kurz zu mir: [persönliche Vorstellung]
+					</aside>
+				</section>
 
-			  <!-- Slide 4: Was ist WebGL? -->
-			  <section>
-				<h2>Was ist WebGL?</h2>
-				<ul>
-				  <li>
-					<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API" target="_blank">				
-						API für hardwarebeschleunigte Grafik im Browser
-					</a>
-				  </li>
-				  <li>Unterstützt 2D- und 3D-Rendering</li>
-				  <li>Ermöglicht interaktive Anwendungen und Visualisierungen</li>
-				  <li>
-					<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example" target="_blank">				
-						Allerdings ist es sehr komplex und schwer zu bedienen
-					</a>
-				  </li>
-				</ul>
-			  </section>
-
-			  <!-- Slide 5: Warum Three.js? -->
-			  <section>
-				<h2><a href="https://threejs.org/" target="_blank">Three.js</a> to the rescue</h2>
-				<div class="threejscontent">					
-					<img src="images/icon.svg" alt="three.js logo" style="max-width: 50%; height: auto;">
-					<ul>
-						<li>Abstrahiert die Komplexität von WebGL</li>
-						<li>Einfache Syntax für komplexe 3D-Szenen</li>
-						<li>Breite Community und viele Beispiele</li>
-						<li>Viele Frameworks und Bibliotheken für fortgeschrittene Anwendungen</li>
-					</ul>
-				</div>
-			  </section>
-
-			  <!-- Slide 6: Beispiele -->
-			  <section data-background-iframe="https://bruno-simon.com/" data-background-interactive>
-				
-			  </section>
-
-			  <!-- Slide 7: Beispiele -->
-			  <section data-background-iframe="https://cornrevolution.resn.global/#science" data-background-interactive>
-				
-			  </section>
-
-			  <!-- Slide 8: Beispiele -->
-			  <section>
-				<h1>
-					<a href="https://lusion.co/" target="_blank">Lusion</a>
-					
-				</h1>
-			  </section>
-
-			  <!-- Slide 9: Beispiele -->
-			  <section data-background-iframe="https://prior.co.jp/discover/en/ambition" data-background-interactive>
-				
-			  </section>
-
-			  <!-- Slide 10: Beispiele -->
-			  <section data-background-iframe="https://chartogne-taillet.com/en" data-background-interactive>
-
-			  </section>
+				<section>
+					<h2>Agenda</h2>
+					<ol style="font-size: 0.85em; line-height: 2;">
+						<li class="fragment"><strong>The Essentials</strong> — Was macht eine Viz wirklich effektiv?</li>
+						<li class="fragment"><strong>Das Tech-Stack</strong> — D3.js & Svelte im Workflow</li>
+						<li class="fragment"><strong>Charts & Patterns</strong> — Von Shapes bis Netzwerke & Maps</li>
+						<li class="fragment"><strong>The Craft</strong> — Das Handwerk hinter guten Charts</li>
+						<li class="fragment"><strong>Inspiration</strong> — Tools, Ressourcen & Community</li>
+					</ol>
+					<aside class="notes">
+						5 Kapitel, 20 Minuten – los geht's!
+					</aside>
+				</section>
 
 
-			  <!-- Slide 11: Beispiele -->
-			  <section data-background-iframe="https://www.midwam.com/en/" data-background-interactive>
-			  </section>
+				<!-- =====================================================
+				     01 – THE ESSENTIALS
+				     ===================================================== -->
 
-			  <!-- Slide 12: Beispiele -->
-			  <section>
-				<h1>
-					<a href="https://dala.craftedbygc.com/" target="_blank">Dala</a>
-					
-				</h1>
-			  </section>
+				<section data-background-color="#282a36">
+					<p style="color: #50fa7b; font-size: 1.2em; letter-spacing: 0.2em; margin-bottom: 0.2em;">01</p>
+					<h2>The Essentials</h2>
+					<p style="color: #6272a4;">Was macht eine Visualisierung wirklich effektiv?</p>
+					<aside class="notes">
+						Bevor wir in Code eintauchen: Was ist eigentlich eine gute Dataviz?
+					</aside>
+				</section>
 
-			  <!-- Slide 13: Beispiele -->
-			  <section data-background-iframe="https://freiburg-noise.vercel.app/" data-background-interactive>
-
-			  </section>
-
-			  <!-- Slide 14: Beispiele -->
-			  <section data-background-iframe="https://three-satellites.vercel.app/" data-background-interactive>
-
-			  </section>
-
-			  <!-- Slide 15: Beispiele -->
-			  <section data-background-iframe="https://r3f-physics-omega.vercel.app/" data-background-interactive>
-
-			  </section>
-			
-			  <!-- Slide 16: Grundkonzepte -->
-			  <section>
-				<h2>Grundkonzepte</h2>
-				<ul>
-				  <li><strong>Scene:</strong> Der Container für Objekte</li>
-				  <li><strong>Camera:</strong> Perspektive des Betrachters</li>
-				  <li><strong>Renderer:</strong> Zeichnet die Szene</li>
-				</ul>
-			  </section>
-		
-			  <!-- Slide 17: Demo - Rotierender Würfel -->
-			  <section class="code-section">
-				<h2>Demo: Rotierender Würfel</h2>
-				<div class="split-layout">
-					<div class="code-container">
-						<pre><code>
-							const scene = new THREE.Scene();
-							const camera = new THREE.PerspectiveCamera(
-								75,
-								window.innerWidth/window.innerHeight,
-								0.1,
-								1000
-							);
-							const renderer = new THREE.WebGLRenderer();
-							renderer.setSize(window.innerWidth, window.innerHeight);
-							document.body.appendChild(renderer.domElement);
-							
-							const geometry = new THREE.BoxGeometry();
-							const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-							const cube = new THREE.Mesh(geometry, material);
-							scene.add(cube);
-							
-							camera.position.z = 5;
-							function animate() {
-								requestAnimationFrame(animate);
-								cube.rotation.x += 0.01;
-								cube.rotation.y += 0.01;
-								renderer.render(scene, camera);
-							}
-							animate();
-						</code></pre>
+				<section>
+					<h2>Visuelles Encoding</h2>
+					<p style="color: #6272a4; font-size: 0.8em; margin-bottom: 0.8em;">Datenwerte → visuelle Kanäle (Cleveland &amp; McGill, 1984)</p>
+					<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7em; font-size: 0.75em;">
+						<div class="fragment" style="background: rgba(80,250,123,0.15); padding: 0.6em; border-radius: 6px; text-align: center; border: 1px solid rgba(80,250,123,0.3);">
+							<svg width="64" height="32" style="display:block;margin:0 auto 4px;" aria-hidden="true">
+								<line x1="6" y1="29" x2="58" y2="29" stroke="rgba(80,250,123,0.35)" stroke-width="1"/>
+								<rect x="8"  y="13" width="11" height="16" fill="#50fa7b" rx="1"/>
+								<rect x="24" y="20" width="11" height="9"  fill="#50fa7b" rx="1"/>
+								<rect x="40" y="6"  width="11" height="23" fill="#50fa7b" rx="1"/>
+							</svg>
+							<strong style="color: #50fa7b;">Position</strong><br>am präzisesten ✓✓✓
+						</div>
+						<div class="fragment" style="background: rgba(139,233,253,0.15); padding: 0.6em; border-radius: 6px; text-align: center; border: 1px solid rgba(139,233,253,0.3);">
+							<svg width="64" height="32" style="display:block;margin:0 auto 4px;" aria-hidden="true">
+								<rect x="5" y="4"  width="54" height="7" fill="#8be9fd" rx="2"/>
+								<rect x="5" y="14" width="36" height="7" fill="#8be9fd" rx="2"/>
+								<rect x="5" y="24" width="20" height="7" fill="#8be9fd" rx="2"/>
+							</svg>
+							<strong style="color: #8be9fd;">Länge</strong><br>sehr präzise ✓✓
+						</div>
+						<div class="fragment" style="background: rgba(255,184,108,0.15); padding: 0.6em; border-radius: 6px; text-align: center; border: 1px solid rgba(255,184,108,0.3);">
+							<svg width="64" height="32" style="display:block;margin:0 auto 4px;" aria-hidden="true">
+								<circle cx="10" cy="26" r="4"  fill="#ffb86c"/>
+								<circle cx="28" cy="22" r="8"  fill="#ffb86c"/>
+								<circle cx="52" cy="16" r="13" fill="#ffb86c"/>
+							</svg>
+							<strong style="color: #ffb86c;">Fläche</strong><br>gut ✓
+						</div>
+						<div class="fragment" style="background: rgba(255,121,198,0.15); padding: 0.6em; border-radius: 6px; text-align: center; border: 1px solid rgba(255,121,198,0.3);">
+							<svg width="64" height="32" style="display:block;margin:0 auto 4px;" aria-hidden="true">
+								<circle cx="11" cy="16" r="8" fill="#ff5555"/>
+								<circle cx="32" cy="16" r="8" fill="#50fa7b"/>
+								<circle cx="53" cy="16" r="8" fill="#8be9fd"/>
+							</svg>
+							<strong style="color: #ff79c6;">Farbe (Hue)</strong><br>für Kategorien
+						</div>
+						<div class="fragment" style="background: rgba(189,147,249,0.15); padding: 0.6em; border-radius: 6px; text-align: center; border: 1px solid rgba(189,147,249,0.3);">
+							<svg width="64" height="32" style="display:block;margin:0 auto 4px;" aria-hidden="true">
+								<path d="M32,16 L32,3 A13,13,0,0,1,43.3,22.5 Z" fill="#bd93f9"/>
+								<path d="M32,16 L43.3,22.5 A13,13,0,0,1,20.7,22.5 Z" fill="#bd93f9" opacity="0.55"/>
+								<path d="M32,16 L20.7,22.5 A13,13,0,0,1,32,3 Z" fill="#bd93f9" opacity="0.25"/>
+							</svg>
+							<strong style="color: #bd93f9;">Winkel</strong><br>ungenau ✗
+						</div>
+						<div class="fragment" style="background: rgba(241,250,140,0.15); padding: 0.6em; border-radius: 6px; text-align: center; border: 1px solid rgba(241,250,140,0.3);">
+							<svg width="64" height="32" style="display:block;margin:0 auto 4px;" aria-hidden="true">
+								<circle cx="10" cy="16" r="7" fill="#f1fa8c"/>
+								<rect x="24" y="9" width="14" height="14" fill="#f1fa8c"/>
+								<polygon points="54,5 62,27 46,27" fill="#f1fa8c"/>
+							</svg>
+							<strong style="color: #f1fa8c;">Form</strong><br>für Kategorien
+						</div>
 					</div>
-					<div class="demo-container">
-						<img src="images/rotating-cube.gif" alt="Rotating Cube Demo">
+					<aside class="notes">
+						Das erklärt warum Balkendiagramme so mächtig sind – Position auf gemeinsamer Achse ist der präziseste Kanal. Und warum Tortendiagramme problematisch sind – Winkel vergleichen ist schwer.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Welcher Chart passt?</h2>
+					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8em; font-size: 0.78em; margin-top: 0.5em;">
+						<div class="fragment" style="padding: 0.4em 0.6em; border-left: 3px solid #50fa7b;">
+							<p style="color: #50fa7b; margin-bottom: 0.2em;"><strong>Vergleiche</strong></p>
+							<p>Bar Chart, Lollipop, Heatmap</p>
+						</div>
+						<div class="fragment" style="padding: 0.4em 0.6em; border-left: 3px solid #8be9fd;">
+							<p style="color: #8be9fd; margin-bottom: 0.2em;"><strong>Zeitverläufe</strong></p>
+							<p>Line Chart, Area Chart</p>
+						</div>
+						<div class="fragment" style="padding: 0.4em 0.6em; border-left: 3px solid #ffb86c;">
+							<p style="color: #ffb86c; margin-bottom: 0.2em;"><strong>Anteile</strong></p>
+							<p>Stacked Bar, Treemap <span style="color: #ff5555;">(kein Pie!)</span></p>
+						</div>
+						<div class="fragment" style="padding: 0.4em 0.6em; border-left: 3px solid #ff79c6;">
+							<p style="color: #ff79c6; margin-bottom: 0.2em;"><strong>Zusammenhänge</strong></p>
+							<p>Scatter Plot, Bubble Chart</p>
+						</div>
+						<div class="fragment" style="padding: 0.4em 0.6em; border-left: 3px solid #bd93f9;">
+							<p style="color: #bd93f9; margin-bottom: 0.2em;"><strong>Verteilungen</strong></p>
+							<p>Histogram, Violin, Box Plot</p>
+						</div>
+						<div class="fragment" style="padding: 0.4em 0.6em; border-left: 3px solid #f1fa8c;">
+							<p style="color: #f1fa8c; margin-bottom: 0.2em;"><strong>Geografie</strong></p>
+							<p>Choropleth, Bubble Map</p>
+						</div>
 					</div>
-				</div>
-			  </section>
+					<p class="fragment" style="font-size: 0.72em; color: #6272a4; margin-top: 0.8em;">
+						→ <a href="https://www.data-to-viz.com/" target="_blank">data-to-viz.com</a> — Interaktiver Entscheidungsbaum: Datenstruktur eingeben, passende Charts bekommen.
+					</p>
+					<aside class="notes">
+						data-to-viz.com ist meine erste Anlaufstelle wenn ich nicht sicher bin welcher Chart-Typ passt. Man gibt seine Datenstruktur ein (1 numerisch, 2 kategorisch, etc.) und bekommt einen Entscheidungsbaum mit passenden Chart-Typen inkl. Pros/Cons und Code-Beispielen.
+					</aside>
+				</section>
 
-			  <!-- Slide 18: Kameras in Three.js -->
-			  <section>
-				<h2 style="font-size: 1.8em;">Kameras in Three.js</h2>
-				<div class="split-layout" style="font-size: 0.8em;">
-					<div class="left-column">
-						<h3 style="font-size: 1.2em;">Haupttypen</h3>
-						<ul style="margin: 0;">
-							<li><strong>PerspectiveCamera:</strong> Realistische Perspektive</li>
-							<li><strong>OrthographicCamera:</strong> Technische Ansichten</li>
-						</ul>
+
+				<!-- =====================================================
+				     02 – DAS TECH-STACK
+				     ===================================================== -->
+
+				<section data-background-color="#282a36">
+					<p style="color: #ffb86c; font-size: 1.2em; letter-spacing: 0.2em; margin-bottom: 0.2em;">02</p>
+					<h2>Das Tech-Stack</h2>
+					<p style="color: #6272a4;">JavaScript, D3.js & Svelte</p>
+					<aside class="notes">
+						Der moderne Stack für Web-Dataviz: D3 für die Mathematik, Svelte für das Rendering.
+					</aside>
+				</section>
+
+				<section>
+					<h2><a href="https://d3js.org/" target="_blank">D3.js</a></h2>
+					<h3 style="color: #6272a4;">Data-Driven Documents</h3>
+					<p class="fragment" style="font-size: 0.85em; margin-top: 0.6em;">Kein Chart-Tool — ein <strong>Ökosystem von Modulen</strong>.</p>
+					<p class="fragment" style="font-size: 0.8em; color: #6272a4; margin-top: 0.3em;">Scales · Shapes · Layouts · Projections · Axes · Transitions …</p>
+					<pre class="fragment"><code class="javascript" data-trim>
+// Daten → DOM-Elemente
+svg.selectAll("rect")
+  .data(dataset)
+  .join("rect")
+  .attr("x", d => xScale(d.category))
+  .attr("height", d => height - yScale(d.value));
+					</code></pre>
+					<aside class="notes">
+						D3 ist seit 2011 der Standard. Wichtig: Es ist kein "baut mir einen Chart"-Tool. Es übersetzt Daten in visuelle Elemente. .data() bindet Arrays an DOM-Elemente, .join() kümmert sich um Enter, Update und Exit.
+					</aside>
+				</section>
+
+				<section data-background-iframe="https://observablehq.com/embed/@d3/zoomable-bar-chart?cell=*" data-background-interactive>
+					<aside class="notes">
+						Einfacher D3 Bar Chart auf Observable. Observable ist übrigens ein tolles Prototyping-Tool – dazu gleich mehr.
+					</aside>
+				</section>
+
+				<section>
+					<h2>D3 + Svelte</h2>
+					<p style="color: #ffb86c; font-size: 0.9em;">Das ideale Duo</p>
+					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em; font-size: 0.78em; margin-top: 0.8em;">
+						<div style="background: rgba(139,233,253,0.1); border: 1px solid rgba(139,233,253,0.3); border-radius: 6px; padding: 0.8em;">
+							<p style="color: #8be9fd; margin-bottom: 0.4em;"><strong>D3 übernimmt:</strong></p>
+							<p>Scales, Layouts, Shapes,<br>Projections, Berechnungen</p>
+						</div>
+						<div style="background: rgba(80,250,123,0.1); border: 1px solid rgba(80,250,123,0.3); border-radius: 6px; padding: 0.8em;">
+							<p style="color: #50fa7b; margin-bottom: 0.4em;"><strong>Svelte übernimmt:</strong></p>
+							<p>Reaktives Rendering,<br>Animationen, State, DOM</p>
+						</div>
 					</div>
-					<div class="right-column">
-						<h3 style="font-size: 1.2em;">Beispiel</h3>
-						<pre style="margin: 0;"><code style="font-size: 0.9em;">
-const camera = new THREE.PerspectiveCamera(
-    75,
-    window.innerWidth / window.innerHeight,
-    0.1,
-    1000
-);
-camera.position.z = 5;</code></pre>
+					<p class="fragment" style="margin-top: 0.8em; font-size: 0.78em; color: #6272a4;">
+						Kein Virtual DOM — Svelte kompiliert zu nativem JS → top Performance.
+					</p>
+					<aside class="notes">
+						Sveltes reaktives System passt perfekt: Wenn sich Daten ändern, updaten sich die Visualisierungen automatisch. D3 rechnet, Svelte rendert. Das NYT Graphics Team nutzt übrigens genau diesen Stack!
+					</aside>
+				</section>
+
+				<section data-background-iframe="https://www.connorrothschild.com/post/svelte-and-d3" data-background-interactive>
+					<aside class="notes">
+						Connor Rothschild's Artikel zu Svelte + D3 – sehr empfehlenswert als Einstieg.
+					</aside>
+				</section>
+
+				<section>
+					<h2><a href="https://next.layerchart.com/" target="_blank">LayerChart</a></h2>
+					<p style="font-size: 0.85em;">Svelte + D3 — deklarative Chart-Komponenten</p>
+					<pre><code class="html" data-trim style="font-size: 0.78em;">
+&lt;Chart data={salesData} x="month" y="revenue"&gt;
+  &lt;Svg&gt;
+    &lt;Axis placement="left" /&gt;
+    &lt;Axis placement="bottom" /&gt;
+    &lt;Bars /&gt;
+    &lt;Tooltip.Root&gt;
+      &lt;Tooltip.Item label="Umsatz" /&gt;
+    &lt;/Tooltip.Root&gt;
+  &lt;/Svg&gt;
+&lt;/Chart&gt;
+					</code></pre>
+					<aside class="notes">
+						LayerChart abstrahiert D3 in deklarative Svelte-Komponenten. Schnell produktiv, aber mit D3-Power dahinter.
+					</aside>
+				</section>
+
+				<section data-background-iframe="https://observablehq.com/embed/@d3/bar-chart-race?cell=*" data-background-interactive>
+					<aside class="notes">
+						Bar Chart Race – die Top-Marken weltweit von 2000–2019. Das Auge folgt der Bewegung, man verfolgt jeden Balken. Das wäre mit hartem Cut nicht möglich.
+					</aside>
+				</section>
+
+
+				<!-- =====================================================
+				     03 – CHARTS & PATTERNS
+				     ===================================================== -->
+
+				<section data-background-color="#282a36">
+					<p style="color: #8be9fd; font-size: 1.2em; letter-spacing: 0.2em; margin-bottom: 0.2em;">03</p>
+					<h2>Charts & Patterns</h2>
+					<p style="color: #6272a4;">Hierarchien, Netzwerke & Maps</p>
+					<aside class="notes">
+						Was D3 jenseits von Balken- und Liniendiagrammen kann.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Rendering: SVG vs. Canvas vs. WebGL</h2>
+					<div style="margin-top: 0.6em; font-size: 0.82em;">
+						<p class="fragment" style="padding: 0.4em 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+							<strong style="color: #50fa7b;">SVG</strong> &nbsp;→&nbsp; &lt; 1.000 Elemente &nbsp;·&nbsp; DOM &nbsp;·&nbsp; CSS &nbsp;·&nbsp; Accessibility ✓
+						</p>
+						<p class="fragment" style="padding: 0.4em 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+							<strong style="color: #ffb86c;">Canvas 2D</strong> &nbsp;→&nbsp; bis 10.000 Elemente &nbsp;·&nbsp; Pixel-basiert
+						</p>
+						<p class="fragment" style="padding: 0.4em 0;">
+							<strong style="color: #ff79c6;">WebGL</strong> &nbsp;→&nbsp; 100.000+ Elemente &nbsp;·&nbsp; GPU &nbsp;·&nbsp; 3D
+						</p>
 					</div>
-				</div>
-			  </section>
+					<aside class="notes">
+						Für die meisten Dashboard-Charts: SVG. Für große Datensätze: Canvas. Für Geodaten / 3D: WebGL.
+					</aside>
+				</section>
 
-			  <section>
-				<img src="images/cameras.webp" alt="Kameras">
-			  </section>
+				<section>
+					<h2>Hierarchien</h2>
+					<p style="color: #6272a4;">Bäume, Verschachtelungen, Teil-Ganzes</p>
+					<p class="fragment" style="font-size: 0.85em; margin-top: 0.6em;">
+						<code style="color: #50fa7b;">d3.hierarchy()</code> + <code style="color: #ffb86c;">d3.treemap()</code> / <code style="color: #8be9fd;">d3.pack()</code>
+					</p>
+				</section>
 
-			  <!-- Slide 19: Kameras in Three.js Beispiel-->
-			  <section data-background-iframe="https://threejs.org/examples/webgl_camera.html" data-background-interactive>
+				<section data-background-iframe="https://observablehq.com/embed/@d3/zoomable-treemap?cell=*" data-background-interactive>
+					<aside class="notes">
+						Treemap – Fläche repräsentiert Größe. Gut für Vergleiche auf mehreren Hierarchieebenen.
+					</aside>
+				</section>
 
-			  </section>
+				<section>
+					<h2>Netzwerke & Beziehungen</h2>
+					<p style="color: #6272a4;">Knoten (Nodes) & Verbindungen (Edges)</p>
+					<p class="fragment" style="font-size: 0.85em; margin-top: 0.6em;">
+						<code style="color: #50fa7b;">d3.forceSimulation()</code> — Physik-basiertes Layout
+					</p>
+				</section>
 
-			  <!-- Slide 20: Geometrien in Three.js -->
-			  <section>
-				<h2 style="font-size: 1.6em;">Geometrien in Three.js</h2>
-				<div class="split-layout" style="font-size: 0.7em;">
-					<div class="left-column">
-						<h3 style="font-size: 1.1em;">Grundformen</h3>
-						<ul style="margin: 0;">
-							<li><strong><a href="https://threejs.org/docs/scenes/geometry-browser.html#BoxGeometry" target="_blank">BoxGeometry:</a></strong> Würfel/Quader</li>
-							<li><strong><a href="https://threejs.org/docs/scenes/geometry-browser.html#SphereGeometry" target="_blank">SphereGeometry:</a></strong> Kugel</li>
-							<li><strong>CylinderGeometry:</strong> Zylinder</li>
-							<li><strong>PlaneGeometry:</strong> 2D-Fläche</li>
-							<li><strong>TorusGeometry:</strong> Donut</li>
-							<li><strong><a href="https://threejs.org/examples/#webgl_buffergeometry_rawshader" target="_blank">BufferGeometry:</a></strong> Eigene Formen</li>
-						</ul>
+				<section data-background-iframe="https://observablehq.com/embed/@d3/disjoint-force-directed-graph?cell=*" data-background-interactive>
+					<aside class="notes">
+						Force-directed Graph – Knoten suchen ihre Gleichgewichtspositionen durch simulierte Physik.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Maps</h2>
+					<p style="color: #6272a4;">Geografische Daten im räumlichen Kontext</p>
+					<p class="fragment" style="font-size: 0.85em; margin-top: 0.6em;">
+						<code style="color: #50fa7b;">d3.geoProjection()</code> — 50+ Projektionen
+					</p>
+					<p class="fragment" style="font-size: 0.75em; color: #ff5555;">⚠️ Projektion bewusst wählen — Mercator verzerrt Flächen!</p>
+				</section>
+
+				<section data-background-iframe="https://observablehq.com/embed/@d3/world-choropleth?cell=*" data-background-interactive>
+					<aside class="notes">
+						Choropleth Map – klassisch für Wahlkarten, Bevölkerungsdaten, etc.
+					</aside>
+				</section>
+
+
+				<!-- =====================================================
+				     04 – THE CRAFT
+				     ===================================================== -->
+
+				<section data-background-color="#282a36">
+					<p style="color: #ff79c6; font-size: 1.2em; letter-spacing: 0.2em; margin-bottom: 0.2em;">04</p>
+					<h2>The Craft</h2>
+					<p style="color: #6272a4;">Das Handwerk hinter guten Charts</p>
+					<aside class="notes">
+						Technisch können wir fast alles bauen. Wie macht man es gut?
+					</aside>
+				</section>
+
+				<section>
+					<h2>Die Kernfrage</h2>
+					<h3 class="fragment" style="color: #50fa7b; font-size: 1.5em; margin-top: 0.5em;">"So what?"</h3>
+					<p class="fragment" style="font-size: 0.85em; margin-top: 0.8em; line-height: 1.7;">
+						Jeder Chart braucht eine klare Botschaft.<br>
+						<span style="color: #6272a4;">Wenn du sie nicht in einem Satz formulieren kannst,<br>ist der Chart noch nicht fertig.</span>
+					</p>
+					<aside class="notes">
+						Das ist die wichtigste Frage. Was soll der Nutzer mitnehmen? Die Überschrift sollte die Botschaft sein, nicht nur den Inhalt beschreiben. "Umsatz 2024" ist keine Botschaft. "Umsatz wächst trotz Inflation" ist eine.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Dos &amp; Don'ts</h2>
+					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2em; font-size: 0.8em; margin-top: 0.5em;">
+						<div>
+							<p style="color: #50fa7b; margin-bottom: 0.5em;"><strong>✓ Tun</strong></p>
+							<p class="fragment">Aussagekräftige Titel & Labels</p>
+							<p class="fragment">Y-Achse bei 0 beginnen</p>
+							<p class="fragment">Farbe sparsam & bedeutungsvoll</p>
+							<p class="fragment">Datenquelle nennen</p>
+						</div>
+						<div>
+							<p style="color: #ff5555; margin-bottom: 0.5em;"><strong>✗ Lassen</strong></p>
+							<p class="fragment">3D-Effekte ohne Nutzen</p>
+							<p class="fragment">Regenbogen-Farbverläufe</p>
+							<p class="fragment">Abgeschnittene Y-Achse</p>
+							<p class="fragment">Pie Charts für &gt; 4 Kategorien</p>
+						</div>
 					</div>
-					<div class="right-column">
-						<h3 style="font-size: 1.1em;">Beispiel</h3>
-						<pre style="margin: 0;"><code style="font-size: 0.8em;">
-const geometry = new THREE.SphereGeometry(1, 32, 32);
-const material = new THREE.MeshStandardMaterial({ 
-    color: 0x0077ff 
-});
-const mesh = new THREE.Mesh(geometry, material);
-scene.add(mesh);</code></pre>
+					<aside class="notes">
+						Edward Tufte: "Data-Ink Ratio" – jeder Pixel sollte Daten repräsentieren. Die abgeschnittene Y-Achse ist der häufigste Trick um Visualisierungen irreführend zu machen.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Data Storytelling</h2>
+					<p class="fragment" style="font-size: 0.87em; margin-top: 0.5em;">Daten allein überzeugen selten.</p>
+					<p class="fragment" style="font-size: 0.87em;">Eine <strong>Geschichte</strong> macht Daten unvergesslich.</p>
+					<div class="fragment" style="margin-top: 1em; font-size: 0.8em; display: flex; justify-content: space-around; align-items: center;">
+						<span style="color: #8be9fd;">Kontext</span>
+						<span style="color: #6272a4;">→</span>
+						<span style="color: #ffb86c;">Spannung</span>
+						<span style="color: #6272a4;">→</span>
+						<span style="color: #ff79c6;">Auflösung</span>
+						<span style="color: #6272a4;">→</span>
+						<span style="color: #50fa7b;">Handlung</span>
 					</div>
-				</div>
-			
-			  </section>
+					<aside class="notes">
+						Scrollytelling ist eine sehr effektive Technik im Web dafür. The Pudding ist das beste Beispiel.
+					</aside>
+				</section>
 
-			  <!-- Slide 21: Materialien in Three.js -->
-			  <section>
-				<h2 style="font-size: 1.6em;">Materialien in Three.js</h2>
-				<div class="split-layout" style="font-size: 0.7em;">
-					<div class="left-column">
-						<h3 style="font-size: 1.1em;">Häufig verwendete Materialien</h3>
-						<ul style="margin: 0;">
-							<li><strong>MeshBasicMaterial:</strong> Einfach, kein Licht</li>
-							<li><strong><a href="https://threejs.org/docs/scenes/material-browser.html#MeshStandardMaterial" target="_blank">MeshStandardMaterial:</a></strong> Physikalisch basiert</li>
-							<li><strong>MeshPhongMaterial:</strong> Glänzend</li>
-							<li><strong>MeshLambertMaterial:</strong> Weich, matt</li>
-							<li><strong>MeshNormalMaterial:</strong> Debug-Normalen</li>
-						</ul>
+				<section data-background-iframe="https://pudding.cool/2024/03/same-name/" data-background-interactive>
+					<aside class="notes">
+						The Pudding – Visual Essays. Scrollytelling auf höchstem Niveau. Achtet wie Text und Visualisierung miteinander verwoben sind.
+					</aside>
+				</section>
+
+
+				<!-- =====================================================
+				     05 – INSPIRATION
+				     ===================================================== -->
+
+				<section data-background-color="#282a36">
+					<p style="color: #bd93f9; font-size: 1.2em; letter-spacing: 0.2em; margin-bottom: 0.2em;">05</p>
+					<h2>Inspiration</h2>
+					<p style="color: #6272a4;">Künstler, Libraries & Ressourcen</p>
+					<aside class="notes">
+						Wer macht beeindruckende Dataviz? Und wie fangt ihr an?
+					</aside>
+				</section>
+
+				<section data-background-iframe="https://shirleywu.studio/" data-background-interactive>
+					<aside class="notes">
+						Shirley Wu – Film Flowers. Filmkritiken als Blumen. Jedes Blatt = eine Bewertungsdimension. Dataviz als Kunst mit echten Daten.
+					</aside>
+				</section>
+
+				<section data-background-iframe="https://www.visualcinnamon.com/portfolio/breathing-earth" data-background-interactive>
+					<aside class="notes">
+						Nadieh Bremer – Breathing Earth. Die Vegetation der Erde über ein Jahr als atmende Animation.
+					</aside>
+				</section>
+
+				<section data-background-iframe="https://truth-and-beauty.net/projects/rethinking-the-world" data-background-interactive>
+					<aside class="notes">
+						Moritz Stefaner – Rethinking the World für den OECD. Globale Entwicklungsdaten interaktiv.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Chart Libraries</h2>
+					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8em; font-size: 0.8em; margin-top: 0.6em;">
+						<div class="fragment" style="padding: 0.4em 0.6em; border-left: 3px solid #50fa7b;">
+							<strong style="color: #50fa7b;">Svelte</strong><br>
+							<a href="https://next.layerchart.com/">LayerChart</a>
+						</div>
+						<div class="fragment" style="padding: 0.4em 0.6em; border-left: 3px solid #8be9fd;">
+							<strong style="color: #8be9fd;">React</strong><br>
+							<a href="https://recharts.org/">Recharts</a> · <a href="https://nivo.rocks/">Nivo</a> · <a href="https://airbnb.io/visx/">visx</a>
+						</div>
+						<div class="fragment" style="padding: 0.4em 0.6em; border-left: 3px solid #ffb86c;">
+							<strong style="color: #ffb86c;">Agnostisch</strong><br>
+							<a href="https://www.chartjs.org/">Chart.js</a> · <a href="https://echarts.apache.org/">ECharts</a>
+						</div>
+						<div class="fragment" style="padding: 0.4em 0.6em; border-left: 3px solid #ff79c6;">
+							<strong style="color: #ff79c6;">Geo / 3D</strong><br>
+							<a href="https://deck.gl/">Deck.gl</a> · <a href="https://threejs.org/">Three.js</a>
+						</div>
 					</div>
-					<div class="right-column">
-						<img src="images/materials.webp" alt="Materials">
-					</div>
-				</div>
-				<div class="tip-box" style="font-size: 0.7em; margin-top: 0.3em;">
-					<strong>💡 Tipp:</strong> Materialien können Farbe, Texturen, Transparenz, Metalness und Roughness enthalten
-				</div>
-			  </section>
+					<aside class="notes">
+						Der Hinweis: Nicht immer D3 von Grund auf. Für Standard-Charts eine Library nehmen, für einzigartige Visualisierungen D3 direkt.
+					</aside>
+				</section>
 
-			  <!-- Slide 22: Licht in Three.js -->
-			  <section>
-				<h2 style="font-size: 1.6em;">Licht in Three.js</h2>
-				<div class="split-layout" style="font-size: 0.7em;">
-					<div class="left-column">
-						<p>Verschiedene Lichtquellen sorgen für realistische Ausleuchtung der Szene:</p>
-					</div>
-					<div class="right-column">
-						<ul>
-				<ul>
-				  <li><strong>AmbientLight:</strong> Gleichmäßige Grundbeleuchtung</li>
-				  <li><strong>DirectionalLight:</strong> Licht mit Richtung (wie Sonne)</li>
-				  <li><strong>PointLight:</strong> Punktförmige Lichtquelle (wie Glühbirne)</li>
-				  <li><strong>SpotLight:</strong> Lichtkegel mit Schatten (wie Taschenlampe)</li>
-							<li><strong>HemisphereLight:</strong> Kombination aus Himmels- und Bodenlicht</li>
-						</ul>
-					</div>
-				</div>
-			  
-				<pre><code>
-			  const light = new THREE.DirectionalLight(0xffffff, 1);
-			  light.position.set(5, 10, 7.5);
-			  scene.add(light);
-				</code></pre>
-			  </section>
+				<section>
+					<h2>Getting Started</h2>
+					<p class="fragment" style="font-size: 0.85em; margin: 0.5em 0;">🟢 Standard-Charts → <a href="https://www.chartjs.org/">Chart.js</a>, <a href="https://recharts.org/">Recharts</a>, <a href="https://nivo.rocks/">Nivo</a></p>
+					<p class="fragment" style="font-size: 0.85em; margin: 0.5em 0;">🟡 Custom Viz → <a href="https://d3js.org/">D3.js</a> + Svelte/React</p>
+					<p class="fragment" style="font-size: 0.85em; margin: 0.5em 0;">🔵 Prototyping → <a href="https://observablehq.com/">Observable</a></p>
+					<p class="fragment" style="font-size: 0.85em; margin: 0.5em 0;">📖 Lernen → <a href="https://2019.wattenberger.com/">Wattenberger</a>, <a href="https://www.youtube.com/@CurranKelleher">Curran Kelleher</a></p>
+					<p class="fragment" style="font-size: 0.82em; color: #6272a4; margin-top: 0.8em;">
+						→ Echten Datensatz nehmen. Einfach bauen. Learning by doing!
+					</p>
+					<aside class="notes">
+						Mein Rat: Einfach anfangen. Observable ist perfekt um D3 ohne Build-Setup auszuprobieren. Amelia Wattenbergers interaktive Guides sind absolut hervorragend für den Einstieg.
+					</aside>
+				</section>
 
-			  <section>
-				<img src="images/lights.webp" alt="Lights">
-			  </section>
+				<!-- Danke -->
+				<section>
+					<h2>Danke! 🙏</h2>
+					<p style="margin-top: 1em;">Fragen?</p>
+					<p style="margin-top: 0.8em; font-size: 0.8em; color: #6272a4;">
+						<a href="https://stefanreifenberg.com" target="_blank">stefanreifenberg.com</a>
+					</p>
+					<aside class="notes">
+						Vielen Dank! Hat jemand schon Erfahrung mit D3 oder einer der Libraries?
+					</aside>
+				</section>
 
-			  <!-- Slide 23: Schatten in Three.js -->
-			  <section>
-				<h2 style="font-size: 1.6em;">Schatten in Three.js</h2>
-				<div class="split-layout" style="font-size: 0.7em;">
-					<div class="left-column">
-						<p>Für realistische Szenen können Objekte Schatten werfen und empfangen:</p>
-						<ul style="margin: 0;">
-							<li><code>renderer.shadowMap.enabled = true;</code></li>
-							<li>Nur bestimmte Lichtquellen unterstützen Schatten: <code>DirectionalLight</code>, <code>SpotLight</code></li>
-							<li>Mesh muss <code>castShadow</code> bzw. <code>receiveShadow</code> aktiviert haben</li>
-						</ul>
-					</div>
-					<div class="right-column">
-						<pre style="margin: 0;"><code style="font-size: 0.8em;">
-						// Aktivieren im Renderer
-						renderer.shadowMap.enabled = true;
+				<section data-background-iframe="https://frontend-meetup-outro.vercel.app/" data-background-interactive>
+				</section>
 
-						// Lichtquelle
-						light.castShadow = true;
-
-						// Objekte
-						mesh.castShadow = true;
-						mesh.receiveShadow = true;</code></pre>
-					</div>
-				</div>
-				<div class="tip-box" style="font-size: 0.7em; margin-top: 0.3em;">
-					<strong>Hinweis:</strong> Schatten können performanceintensiv sein – Auflösung & Kamera begrenzen!
-				</div>
-			  </section>
-
-			  <!-- Slide 24: Schatten in Three.js Beispiel-->
-			  <section data-background-iframe="https://threejs.org/examples/?q=light#webgl_lights_physical" data-background-interactive>
-
-			  </section>
-
-			  <!-- Slide 25: Erweiterte Funktionen -->
-			  <section>
-				<h2>Erweiterte Funktionen</h2>
-				<ul style="font-size: 0.8em;">
-				  <li><strong>Interaktionen:</strong> <code><a href="https://threejs.org/examples/?q=raycas#webgl_instancing_raycast" target="_blank">Raycaster</a></code> für Maus/Touch-Events</li>
-				  <li><strong><a href="https://codesandbox.io/p/sandbox/2n98yj?file=%2Fsrc%2FApp.js" target="_blank">Animationen</a></strong> <code>gsap</code> oder <code>AnimationMixer</code></li>
-				  <li><strong>Externe Modelle:</strong> <code><a href="https://threejs.org/examples/?q=gltf#webgl_animation_keyframes" target="_blank">GLTFLoader</a></code> für GLB/GLTF Assets</li>
-				  <li><strong><a href="https://pmndrs.github.io/postprocessing/public/demo/#depth-of-field" target="_blank">Post-Processing:</a></strong> <code>EffectComposer</code> für Bloom, DoF, Outline</li>
-				</ul>
-			  </section>
-
-			  <!-- Slide 26: Frameworks -->
-			  <section>
-				<h2>Three.js + Frameworks</h2>
-				<h3>React - <a href="https://r3f.docs.pmnd.rs/getting-started/introduction" target="_blank">react-three-fiber</a></h3>
-				<h3>Svelte - <a href="https://threlte.xyz/" target="_blank">threlte</a></h3>
-				<h3>Vue - <a href="https://tresjs.org/" target="_blank">tresjs</a></h3>
-				<h3>Angular - <a href="https://angularthree.org/" target="_blank">angular-three</a></h3>
-			  </section>
-
-			  <!-- Slide 27: react-three-fiber -->
-			  <section>
-				<h2 style="font-size: 1.6em;"><a href="https://r3f.docs.pmnd.rs/getting-started/introduction" target="_blank">@react-three/fiber</a></h2>
-				<div class="split-layout" style="font-size: 0.7em;">
-					<div class="left-column">
-						<p>React-Renderer für Three.js – bringt declarative Komponentenstruktur in die 3D-Welt</p>
-						<ul style="margin: 0;">
-							<li>Komponenten-basiertes 3D mit JSX statt imperative Three.js-API</li>
-							<li>Ersetzt den `WebGLRenderer`, verwaltet Kamera, Szene & Render-Loop</li>
-							<li>Kompatibel mit dem gesamten React-Ökosystem</li>
-						</ul>
-					</div>
-					<div class="right-column">
-						<pre style="margin: 0;">
-							<code style="font-size: 0.8em;">
-								import { Canvas } from '@react-three/fiber';
-
-								function Scene() {
-								return (
-									&lt;Canvas&gt;
-									&lt;mesh&gt;
-										&lt;boxGeometry /&gt;
-										&lt;meshStandardMaterial color="hotpink" /&gt;
-									&lt;/mesh&gt;
-									&lt;/Canvas&gt;
-								);
-								}
-							</code>
-						</pre>
-					</div>
-				</div>
-				<div class="tip-box" style="font-size: 0.7em; margin-top: 0.3em;">
-					<strong>→</strong> Ideal für React-Entwickler:innen, die mit Three.js arbeiten möchten
-				</div>
-			  </section>
-
-			  <!-- Slide 28: react-three-fiber Drei -->
-			  <section>
-				<h2 style="font-size: 1.6em;"><a href="https://drei.docs.pmnd.rs/getting-started/introduction" target="_blank">@react-three/drei</a></h2>
-				<div class="split-layout" style="font-size: 0.7em;">
-					<div class="left-column">
-						<p>Hilfsbibliothek mit nützlichen Komponenten und Abkürzungen für react-three-fiber</p>
-						<ul style="margin: 0;">
-							<li><code>&lt;OrbitControls /&gt;</code>: Kamerasteuerung mit Maus</li>
-							<li><code>&lt;Environment /&gt;</code>: HDRI-Umgebung für realistische Beleuchtung</li>
-							<li><code>&lt;useGLTF /&gt;</code>: Einfaches Laden von 3D-Modellen</li>
-							<li><code>&lt;Text /&gt;</code>, <code>&lt;Stage /&gt;</code>, <code>&lt;ContactShadows /&gt;</code> und viele mehr</li>
-						</ul>
-					</div>
-					<div class="right-column">
-						<h3 style="font-size: 1.1em;">Beispiel</h3>
-						<pre style="margin: 0;"><code style="font-size: 0.8em;">
-import { OrbitControls, Environment, useGLTF } from '@react-three/drei';</code></pre>
-					</div>
-				</div>
-				<div class="tip-box" style="font-size: 0.7em; margin-top: 0.3em;">
-					<strong>→</strong> Spart viel Zeit & Boilerplate, besonders für Prototyping & Präsentationen
-				</div>
-			  </section>
-
-			  <!-- Slide 29: Threlte -->
-			  <section>
-				<h2 style="font-size: 1.6em;"><a href="https://threlte.xyz/" target="_blank">Threlte</a></h2>
-				<div class="split-layout" style="font-size: 0.7em;">
-					<div class="left-column">
-						<p>Threlte ist ein komponentenbasiertes 3D-Toolkit für <strong>Svelte</strong>, inspiriert von <code>react-three-fiber</code>.</p>
-						<h3 style="font-size: 1.1em;">Highlights:</h3>
-						<ul style="margin: 0;">
-							<li>Declarative 3D-Szenen mit nativer Svelte-Syntax</li>
-							<li>Reaktive Props, Bindings und Stores</li>
-							<li>Modular aufgebaut – mit Canvas, Komponenten & Hooks</li>
-							<li>Optimiert für SvelteKit & SSR</li>
-						</ul>
-					</div>
-					<div class="right-column">
-						<pre style="margin: 0;"><code style="font-size: 0.8em;">
-&lt;script&gt;
-import { Canvas, T  } from '@threlte/core'
-&lt;/script&gt;
-
-&lt;Canvas&gt;
-  &lt;T.Mesh position={[0, 0, 0]}&gt;
-    &lt;T.BoxGeometry /&gt;
-    &lt;T.MeshStandardMaterial color="orange" /&gt;
-  &lt;/T.Mesh&gt;
-&lt;/Canvas&gt;</code></pre>
-					</div>
-				</div>
-				<div class="tip-box" style="font-size: 0.7em; margin-top: 0.3em;">
-					<strong>→</strong> Ideal für Svelte-Entwickler:innen, die in 3D einsteigen wollen
-				</div>
-			  </section>
-			  
-			  <!-- Slide 30: Tipps & Tricks -->
-			  <section>
-				<h2 style="font-size: 1.6em;">Tipps & Tricks für Three.js</h2>
-				<div class="split-layout" style="font-size: 0.7em;">
-					<div class="left-column">
-						<ul style="margin: 0;">
-							<li><strong>Performance optimieren:</strong><br>
-							<a href="https://codesandbox.io/p/sandbox/perlin-cubes-r3f-perf-wtp9t?file=%2Fsrc%2FApp.js">r3f-perf</a> <br>
-							<a href="https://discoverthreejs.com/tips-and-tricks/">Performance Tips</a>
-							<li><strong>Debugging vereinfachen:</strong><br>
-							Mit Tools wie <code>stats.js</code>, <code>dat.GUI</code> oder <code><a href="https://github.com/pmndrs/leva">leva</a></code> kannst du Werte live ändern und Performance messen.</li>
-						</ul>
-					</div>
-					<div class="right-column">
-						<ul style="margin: 0;">
-							<li><strong>Code strukturiert halten:</strong><br>
-							Trenne Setup-Logik (Kamera, Szene, Licht) von dem, was dynamisch passiert (Animation, Interaktion).
-							</li>							
-						</ul>
-					</div>
-				</div>
-			  </section>
-
-			  <!-- Slide 31: Three.js lernen -->
-			  <section>
-				<h2 style="font-size: 1.6em;">Three.js lernen</h2>
-				<div class="split-layout" style="font-size: 0.7em;">
-					<div class="left-column">
-						<ul style="margin: 0;">
-							<li><strong>Kurse</strong><br>
-							<a href="https://threejs-journey.com/" target="_blank">three.js Journey</a> <br>
-							<a href="https://www.youtube.com/@robotbobby9" target="_blank">Robot Bobby</a>
-							<a href="https://www.youtube.com/@akella_" target="_blank">Yuri Artiukh</a>
-							<li><strong>Ressourcen</strong><br>
-							<a href="https://threejs.org/docs/" target="_blank">Three.js Doku</a> <br>
-							<a href="https://threejsresources.com/" target="_blank">threejsresources.com</a> <br>
-							<a href="https://discord.gg/Xg7KGcgG" target="_blank">three.js Discord</a>							
-						</ul>
-					</div>					
-				</div>
-			  </section>
-
-			  <!-- Slide 32: Abschluss -->
-			  <section data-background-iframe="https://frontend-meetup-outro.vercel.app/" data-background-interactive>
-				
-			  </section>
 			</div>
-		  </div>
+		</div>
 
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
 		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
 		</script>
 	</body>
 </html>
-
