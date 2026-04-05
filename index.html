@@ -37,11 +37,11 @@
 				<section>
 					<h2>Agenda</h2>
 					<ol style="font-size: 0.85em; line-height: 2;">
-						<li class="fragment"><strong>The Essentials</strong> — Was macht eine Viz wirklich effektiv?</li>
-						<li class="fragment"><strong>Das Tech-Stack</strong> — D3.js & Svelte im Workflow</li>
-						<li class="fragment"><strong>Charts & Patterns</strong> — Von Shapes bis Netzwerke & Maps</li>
-						<li class="fragment"><strong>The Craft</strong> — Das Handwerk hinter guten Charts</li>
-						<li class="fragment"><strong>Inspiration</strong> — Tools, Ressourcen & Community</li>
+						<li class="fragment"><strong>The Essentials:</strong> Was macht eine Viz wirklich effektiv?</li>
+						<li class="fragment"><strong>The Craft:</strong> Das Handwerk hinter guten Charts</li>
+						<li class="fragment"><strong>Das Tech-Stack:</strong> D3.js & Svelte im Workflow</li>
+						<li class="fragment"><strong>Charts & Patterns:</strong> Von Shapes bis Netzwerke & Maps</li>
+						<li class="fragment"><strong>Inspiration:</strong> Tools, Ressourcen & Community</li>
 					</ol>
 					<aside class="notes">
 						5 Kapitel, 20 Minuten – los geht's!
@@ -122,36 +122,37 @@
 				</section>
 
 				<section>
-					<h2>Welcher Chart passt?</h2>
-					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8em; font-size: 0.78em; margin-top: 0.5em;">
-						<div class="fragment" style="padding: 0.4em 0.6em; border-left: 3px solid #50fa7b;">
-							<p style="color: #50fa7b; margin-bottom: 0.2em;"><strong>Vergleiche</strong></p>
-							<p>Bar Chart, Lollipop, Heatmap</p>
-						</div>
-						<div class="fragment" style="padding: 0.4em 0.6em; border-left: 3px solid #8be9fd;">
-							<p style="color: #8be9fd; margin-bottom: 0.2em;"><strong>Zeitverläufe</strong></p>
-							<p>Line Chart, Area Chart</p>
-						</div>
-						<div class="fragment" style="padding: 0.4em 0.6em; border-left: 3px solid #ffb86c;">
-							<p style="color: #ffb86c; margin-bottom: 0.2em;"><strong>Anteile</strong></p>
-							<p>Stacked Bar, Treemap <span style="color: #ff5555;">(kein Pie!)</span></p>
-						</div>
-						<div class="fragment" style="padding: 0.4em 0.6em; border-left: 3px solid #ff79c6;">
-							<p style="color: #ff79c6; margin-bottom: 0.2em;"><strong>Zusammenhänge</strong></p>
-							<p>Scatter Plot, Bubble Chart</p>
-						</div>
-						<div class="fragment" style="padding: 0.4em 0.6em; border-left: 3px solid #bd93f9;">
-							<p style="color: #bd93f9; margin-bottom: 0.2em;"><strong>Verteilungen</strong></p>
-							<p>Histogram, Violin, Box Plot</p>
-						</div>
-						<div class="fragment" style="padding: 0.4em 0.6em; border-left: 3px solid #f1fa8c;">
-							<p style="color: #f1fa8c; margin-bottom: 0.2em;"><strong>Geografie</strong></p>
-							<p>Choropleth, Bubble Map</p>
-						</div>
-					</div>
-					<p class="fragment" style="font-size: 0.72em; color: #6272a4; margin-top: 0.8em;">
+					<h3>Welcher Chart passt?</h3>
+					<p class="fragment" style="font-size: 0.7em; color: #6272a4; margin-top: 0.4em;">
 						→ <a href="https://www.data-to-viz.com/" target="_blank">data-to-viz.com</a> — Interaktiver Entscheidungsbaum: Datenstruktur eingeben, passende Charts bekommen.
 					</p>
+					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.4em; font-size: 0.75em; margin-top: 0.3em;">
+						<div class="fragment" style="padding: 0.25em 0.5em; border-left: 3px solid #50fa7b;">
+							<p style="color: #50fa7b; margin-bottom: 0.1em;"><strong>Vergleiche</strong></p>
+							<p style="margin: 0;">Bar Chart, Lollipop, Heatmap</p>
+						</div>
+						<div class="fragment" style="padding: 0.25em 0.5em; border-left: 3px solid #8be9fd;">
+							<p style="color: #8be9fd; margin-bottom: 0.1em;"><strong>Zeitverläufe</strong></p>
+							<p style="margin: 0;">Line Chart, Area Chart</p>
+						</div>
+						<div class="fragment" style="padding: 0.25em 0.5em; border-left: 3px solid #ffb86c;">
+							<p style="color: #ffb86c; margin-bottom: 0.1em;"><strong>Anteile</strong></p>
+							<p style="margin: 0;">Stacked Bar, Treemap <span style="color: #ff5555;">(kein Pie!)</span></p>
+						</div>
+						<div class="fragment" style="padding: 0.25em 0.5em; border-left: 3px solid #ff79c6;">
+							<p style="color: #ff79c6; margin-bottom: 0.1em;"><strong>Zusammenhänge</strong></p>
+							<p style="margin: 0;">Scatter Plot, Bubble Chart</p>
+						</div>
+						<div class="fragment" style="padding: 0.25em 0.5em; border-left: 3px solid #bd93f9;">
+							<p style="color: #bd93f9; margin-bottom: 0.1em;"><strong>Verteilungen</strong></p>
+							<p style="margin: 0;">Histogram, Violin, Box Plot</p>
+						</div>
+						<div class="fragment" style="padding: 0.25em 0.5em; border-left: 3px solid #f1fa8c;">
+							<p style="color: #f1fa8c; margin-bottom: 0.1em;"><strong>Geografie</strong></p>
+							<p style="margin: 0;">Choropleth, Bubble Map</p>
+						</div>
+					</div>
+
 					<aside class="notes">
 						data-to-viz.com ist meine erste Anlaufstelle wenn ich nicht sicher bin welcher Chart-Typ passt. Man gibt seine Datenstruktur ein (1 numerisch, 2 kategorisch, etc.) und bekommt einen Entscheidungsbaum mit passenden Chart-Typen inkl. Pros/Cons und Code-Beispielen.
 					</aside>
@@ -159,12 +160,107 @@
 
 
 				<!-- =====================================================
-				     02 – DAS TECH-STACK
+				     02 – THE CRAFT
 				     ===================================================== -->
 
 				<section data-background-color="#282a36">
-					<p style="color: #ffb86c; font-size: 1.2em; letter-spacing: 0.2em; margin-bottom: 0.2em;">02</p>
-					<h2>Das Tech-Stack</h2>
+					<p style="color: #ff79c6; font-size: 1.2em; letter-spacing: 0.2em; margin-bottom: 0.2em;">02</p>
+					<h2>The Craft</h2>
+					<p style="color: #6272a4;">Das Handwerk hinter guten Charts</p>
+					<aside class="notes">
+						Technisch können wir fast alles bauen. Wie macht man es gut?
+					</aside>
+				</section>
+
+				<section>
+					<h2>Die Kernfrage</h2>
+					<h3 class="fragment" style="color: #50fa7b; font-size: 1.5em; margin-top: 0.5em;">"So what?"</h3>
+					<p class="fragment" style="font-size: 0.85em; margin-top: 0.8em; line-height: 1.7;">
+						Jeder Chart braucht eine klare Botschaft.<br>
+						<span style="color: #6272a4;">Wenn du sie nicht in einem Satz formulieren kannst,<br>ist der Chart noch nicht fertig.</span>
+					</p>
+					<aside class="notes">
+						Das ist die wichtigste Frage. Was soll der Nutzer mitnehmen? Die Überschrift sollte die Botschaft sein, nicht nur den Inhalt beschreiben. "Umsatz 2024" ist keine Botschaft. "Umsatz wächst trotz Inflation" ist eine.
+					</aside>
+				</section>
+
+
+
+				<!-- <section>
+					<h2>Dos &amp; Don'ts</h2>
+					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2em; font-size: 0.8em; margin-top: 0.5em;">
+						<div>
+							<p style="color: #50fa7b; margin-bottom: 0.5em;"><strong>✓ Tun</strong></p>
+							<p class="fragment">Aussagekräftige Titel & Labels</p>
+							<p class="fragment">Y-Achse bei 0 beginnen</p>
+							<p class="fragment">Farbe sparsam & bedeutungsvoll</p>
+							<p class="fragment">Datenquelle nennen</p>
+						</div>
+						<div>
+							<p style="color: #ff5555; margin-bottom: 0.5em;"><strong>✗ Lassen</strong></p>
+							<p class="fragment">3D-Effekte ohne Nutzen</p>
+							<p class="fragment">Regenbogen-Farbverläufe</p>
+							<p class="fragment">Abgeschnittene Y-Achse</p>
+							<p class="fragment">Pie Charts für &gt; 4 Kategorien</p>
+						</div>
+					</div>
+					<aside class="notes">
+						Edward Tufte: "Data-Ink Ratio" – jeder Pixel sollte Daten repräsentieren. Die abgeschnittene Y-Achse ist der häufigste Trick um Visualisierungen irreführend zu machen.
+					</aside>
+				</section> -->
+
+				<section>
+					<h2>Data Storytelling</h2>
+					<p class="fragment" style="font-size: 0.87em; margin-top: 0.5em;">Daten allein überzeugen selten.</p>
+					<p class="fragment" style="font-size: 0.87em;">Eine <strong>Geschichte</strong> macht Daten unvergesslich.</p>
+					<div class="fragment" style="margin-top: 1em; font-size: 0.8em; display: flex; justify-content: space-around; align-items: center;">
+						<span style="color: #8be9fd;">Kontext</span>
+						<span style="color: #6272a4;">→</span>
+						<span style="color: #ffb86c;">Spannung</span>
+						<span style="color: #6272a4;">→</span>
+						<span style="color: #ff79c6;">Auflösung</span>
+						<span style="color: #6272a4;">→</span>
+						<span style="color: #50fa7b;">Handlung</span>
+					</div>
+					<aside class="notes">
+						Scrollytelling ist eine sehr effektive Technik im Web dafür. The Pudding ist das beste Beispiel.
+					</aside>
+				</section>
+
+								<!-- chartosaur image section -->
+				<section>
+					<img src="/images/chartosaur1.png" alt="Chartosaur" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
+				</section>
+				<section>
+					<img src="/images/chartosaur2.png" alt="Chartosaur" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
+				</section>
+				<section>
+					<img src="/images/chartosaur3.png" alt="Chartosaur" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
+				</section>
+				<section>
+					<img src="/images/chartosaur4.png" alt="Chartosaur" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
+				</section>
+				<section>
+					<img src="/images/chartosaur5.png" alt="Chartosaur" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
+				</section>
+				<section>
+					<img src="/images/chartosaur6.png" alt="Chartosaur" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
+				</section>
+
+				<section data-background-iframe="https://pudding.cool" data-background-interactive>
+					<aside class="notes">
+						The Pudding – Visual Essays. Scrollytelling auf höchstem Niveau. Achtet wie Text und Visualisierung miteinander verwoben sind.
+					</aside>
+				</section>
+
+
+				<!-- =====================================================
+				     03 – DAS TECH-STACK
+				     ===================================================== -->
+
+				<section data-background-color="#282a36">
+					<p style="color: #ffb86c; font-size: 1.2em; letter-spacing: 0.2em; margin-bottom: 0.2em;">03</p>
+					<h2>Tech-Stack</h2>
 					<p style="color: #6272a4;">JavaScript, D3.js & Svelte</p>
 					<aside class="notes">
 						Der moderne Stack für Web-Dataviz: D3 für die Mathematik, Svelte für das Rendering.
@@ -216,10 +312,8 @@ svg.selectAll("rect")
 					</aside>
 				</section>
 
-				<section data-background-iframe="https://www.connorrothschild.com/post/svelte-and-d3" data-background-interactive>
-					<aside class="notes">
-						Connor Rothschild's Artikel zu Svelte + D3 – sehr empfehlenswert als Einstieg.
-					</aside>
+				<section data-background-iframe="https://datavisualizationwithsvelte.com/" data-background-interactive>
+				
 				</section>
 
 				<section>
@@ -250,11 +344,11 @@ svg.selectAll("rect")
 
 
 				<!-- =====================================================
-				     03 – CHARTS & PATTERNS
+				     04 – CHARTS & PATTERNS
 				     ===================================================== -->
 
 				<section data-background-color="#282a36">
-					<p style="color: #8be9fd; font-size: 1.2em; letter-spacing: 0.2em; margin-bottom: 0.2em;">03</p>
+					<p style="color: #8be9fd; font-size: 1.2em; letter-spacing: 0.2em; margin-bottom: 0.2em;">04</p>
 					<h2>Charts & Patterns</h2>
 					<p style="color: #6272a4;">Hierarchien, Netzwerke & Maps</p>
 					<aside class="notes">
@@ -325,79 +419,6 @@ svg.selectAll("rect")
 
 
 				<!-- =====================================================
-				     04 – THE CRAFT
-				     ===================================================== -->
-
-				<section data-background-color="#282a36">
-					<p style="color: #ff79c6; font-size: 1.2em; letter-spacing: 0.2em; margin-bottom: 0.2em;">04</p>
-					<h2>The Craft</h2>
-					<p style="color: #6272a4;">Das Handwerk hinter guten Charts</p>
-					<aside class="notes">
-						Technisch können wir fast alles bauen. Wie macht man es gut?
-					</aside>
-				</section>
-
-				<section>
-					<h2>Die Kernfrage</h2>
-					<h3 class="fragment" style="color: #50fa7b; font-size: 1.5em; margin-top: 0.5em;">"So what?"</h3>
-					<p class="fragment" style="font-size: 0.85em; margin-top: 0.8em; line-height: 1.7;">
-						Jeder Chart braucht eine klare Botschaft.<br>
-						<span style="color: #6272a4;">Wenn du sie nicht in einem Satz formulieren kannst,<br>ist der Chart noch nicht fertig.</span>
-					</p>
-					<aside class="notes">
-						Das ist die wichtigste Frage. Was soll der Nutzer mitnehmen? Die Überschrift sollte die Botschaft sein, nicht nur den Inhalt beschreiben. "Umsatz 2024" ist keine Botschaft. "Umsatz wächst trotz Inflation" ist eine.
-					</aside>
-				</section>
-
-				<section>
-					<h2>Dos &amp; Don'ts</h2>
-					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2em; font-size: 0.8em; margin-top: 0.5em;">
-						<div>
-							<p style="color: #50fa7b; margin-bottom: 0.5em;"><strong>✓ Tun</strong></p>
-							<p class="fragment">Aussagekräftige Titel & Labels</p>
-							<p class="fragment">Y-Achse bei 0 beginnen</p>
-							<p class="fragment">Farbe sparsam & bedeutungsvoll</p>
-							<p class="fragment">Datenquelle nennen</p>
-						</div>
-						<div>
-							<p style="color: #ff5555; margin-bottom: 0.5em;"><strong>✗ Lassen</strong></p>
-							<p class="fragment">3D-Effekte ohne Nutzen</p>
-							<p class="fragment">Regenbogen-Farbverläufe</p>
-							<p class="fragment">Abgeschnittene Y-Achse</p>
-							<p class="fragment">Pie Charts für &gt; 4 Kategorien</p>
-						</div>
-					</div>
-					<aside class="notes">
-						Edward Tufte: "Data-Ink Ratio" – jeder Pixel sollte Daten repräsentieren. Die abgeschnittene Y-Achse ist der häufigste Trick um Visualisierungen irreführend zu machen.
-					</aside>
-				</section>
-
-				<section>
-					<h2>Data Storytelling</h2>
-					<p class="fragment" style="font-size: 0.87em; margin-top: 0.5em;">Daten allein überzeugen selten.</p>
-					<p class="fragment" style="font-size: 0.87em;">Eine <strong>Geschichte</strong> macht Daten unvergesslich.</p>
-					<div class="fragment" style="margin-top: 1em; font-size: 0.8em; display: flex; justify-content: space-around; align-items: center;">
-						<span style="color: #8be9fd;">Kontext</span>
-						<span style="color: #6272a4;">→</span>
-						<span style="color: #ffb86c;">Spannung</span>
-						<span style="color: #6272a4;">→</span>
-						<span style="color: #ff79c6;">Auflösung</span>
-						<span style="color: #6272a4;">→</span>
-						<span style="color: #50fa7b;">Handlung</span>
-					</div>
-					<aside class="notes">
-						Scrollytelling ist eine sehr effektive Technik im Web dafür. The Pudding ist das beste Beispiel.
-					</aside>
-				</section>
-
-				<section data-background-iframe="https://pudding.cool/2024/03/same-name/" data-background-interactive>
-					<aside class="notes">
-						The Pudding – Visual Essays. Scrollytelling auf höchstem Niveau. Achtet wie Text und Visualisierung miteinander verwoben sind.
-					</aside>
-				</section>
-
-
-				<!-- =====================================================
 				     05 – INSPIRATION
 				     ===================================================== -->
 
@@ -455,10 +476,10 @@ svg.selectAll("rect")
 
 				<section>
 					<h2>Getting Started</h2>
-					<p class="fragment" style="font-size: 0.85em; margin: 0.5em 0;">🟢 Standard-Charts → <a href="https://www.chartjs.org/">Chart.js</a>, <a href="https://recharts.org/">Recharts</a>, <a href="https://nivo.rocks/">Nivo</a></p>
-					<p class="fragment" style="font-size: 0.85em; margin: 0.5em 0;">🟡 Custom Viz → <a href="https://d3js.org/">D3.js</a> + Svelte/React</p>
-					<p class="fragment" style="font-size: 0.85em; margin: 0.5em 0;">🔵 Prototyping → <a href="https://observablehq.com/">Observable</a></p>
-					<p class="fragment" style="font-size: 0.85em; margin: 0.5em 0;">📖 Lernen → <a href="https://2019.wattenberger.com/">Wattenberger</a>, <a href="https://www.youtube.com/@CurranKelleher">Curran Kelleher</a></p>
+					<p class="fragment" style="font-size: 0.85em; margin: 0.5em 0;">Standard-Charts → <a href="https://www.chartjs.org/">Chart.js</a>, <a href="https://www.highcharts.com/">Highcharts</a>, <a href="https://observablehq.com/">observable</a></p>
+					<p class="fragment" style="font-size: 0.85em; margin: 0.5em 0;">Custom Viz → <a href="https://d3js.org/">D3.js</a> + Svelte/React</p>
+					<p class="fragment" style="font-size: 0.85em; margin: 0.5em 0;">Prototyping → <a href="https://observablehq.com/">Observable</a></p>
+					<p class="fragment" style="font-size: 0.85em; margin: 0.5em 0;">Lernen → <a href="https://wattenberger.com/">Wattenberger</a>, <a href="https://www.youtube.com/@CurranKelleher">Curran Kelleher</a></p>
 					<p class="fragment" style="font-size: 0.82em; color: #6272a4; margin-top: 0.8em;">
 						→ Echten Datensatz nehmen. Einfach bauen. Learning by doing!
 					</p>
