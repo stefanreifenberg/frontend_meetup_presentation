@@ -184,6 +184,14 @@
 					</aside>
 				</section>
 
+				<section>
+					<h2>Explorative Datenanalyse (EDA)</h2>
+					<p class="fragment" style="font-size: 0.85em; margin-top: 0.5em;">Bevor du eine Botschaft formulierst, musst du die Daten verstehen.</p>
+					<p class="fragment" style="font-size: 0.85em; margin-top: 0.5em;">Datenvisualisierung ist der Schlüssel zur Datenexploration.</p>
+					<p class="fragment" style="font-size: 0.85em; margin-top: 0.5em;">EDA hilft, Muster, Ausreißer und Zusammenhänge in den Daten zu erkennen.</p>
+					<p class="fragment" style="font-size: 0.85em; margin-top: 0.5em;"><a href="https://r4ds.had.co.nz/exploratory-data-analysis.html" target="_blank">EDA in R</a></p>
+				</section>
+
 
 
 				<!-- <section>
@@ -285,11 +293,28 @@ svg.selectAll("rect")
 					</aside>
 				</section>
 
-				<section data-background-iframe="https://observablehq.com/embed/@d3/zoomable-bar-chart?cell=*" data-background-interactive>
+				<section>
+					<h2>D3.js vs. Observable vs. Observable Plot</h2>
+					<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7em; font-size: 0.75em;">
+						<div style="background: rgba(80,250,123,0.1); border: 1px solid rgba(80,250,123,0.3); border-radius: 6px; padding: 0.8em;">
+							<p style="color: #50fa7b; margin-bottom: 0.4em;"><strong>D3.js</strong></p>
+							<p>Flexibel, aber mehr Boilerplate.<br>Ideal für maßgeschneiderte Visualisierungen.</p>
+						</div>
+						<div style="background: rgba(139,233,253,0.1); border: 1px solid rgba(139,233,253,0.3); border-radius: 6px; padding: 0.8em;">
+							<p style="color: #8be9fd; margin-bottom: 0.4em;"><strong>Observable</strong></p>
+							<p>Interaktive Notebooks mit D3-Integration.<br>Perfekt für Prototyping & Teilen.</p>
+						</div>
+						<div style="background: rgba(255,184,108,0.1); border: 1px solid rgba(255,184,108,0.3); border-radius: 6px; padding: 0.8em;">
+							<p style="color: #ffb86c; margin-bottom: 0.4em;"><strong>Observable Plot</strong></p>
+							<p>Hochwertige Charts mit minimalem Code.<br>Gut für schnelle Analysen & Standardcharts.</p>
+						</div>
+				</section>
+
+				<!-- <section data-background-color="#f8f8f8" data-background-iframe="https://observablehq.com/embed/@d3/horizontal-bar-chart/2?cells=chart" data-background-interactive>
 					<aside class="notes">
 						Einfacher D3 Bar Chart auf Observable. Observable ist übrigens ein tolles Prototyping-Tool – dazu gleich mehr.
 					</aside>
-				</section>
+				</section> -->
 
 				<section>
 					<h2>D3 + Svelte</h2>
@@ -336,12 +361,6 @@ svg.selectAll("rect")
 					</aside>
 				</section>
 
-				<section data-background-iframe="https://observablehq.com/embed/@d3/bar-chart-race?cell=*" data-background-interactive>
-					<aside class="notes">
-						Bar Chart Race – die Top-Marken weltweit von 2000–2019. Das Auge folgt der Bewegung, man verfolgt jeden Balken. Das wäre mit hartem Cut nicht möglich.
-					</aside>
-				</section>
-
 
 				<!-- =====================================================
 				     04 – CHARTS & PATTERNS
@@ -382,7 +401,8 @@ svg.selectAll("rect")
 					</p>
 				</section>
 
-				<section data-background-iframe="https://observablehq.com/embed/@d3/zoomable-treemap?cell=*" data-background-interactive>
+				<section data-background-color="#f8f8f8">
+					<iframe src="https://observablehq.com/embed/@d3/pack/2?cells=chart" style="width:100%;height:100vh;border:none;" scrolling="no"></iframe>
 					<aside class="notes">
 						Treemap – Fläche repräsentiert Größe. Gut für Vergleiche auf mehreren Hierarchieebenen.
 					</aside>
@@ -396,7 +416,19 @@ svg.selectAll("rect")
 					</p>
 				</section>
 
-				<section data-background-iframe="https://observablehq.com/embed/@d3/disjoint-force-directed-graph?cell=*" data-background-interactive>
+				<section data-background-color="#f8f8f8" data-background-iframe="https://observablehq.com/embed/fcbc77e23fbd958c?cells=chart" data-background-interactive>
+					<aside class="notes">
+						Force-directed Graph – Knoten suchen ihre Gleichgewichtspositionen durch simulierte Physik.
+					</aside>
+				</section>
+
+				<section data-background-color="#f8f8f8" data-background-iframe="https://observablehq.com/embed/@d3/sankey/2?cells=chart" data-background-interactive>
+					<aside class="notes">
+						Force-directed Graph – Knoten suchen ihre Gleichgewichtspositionen durch simulierte Physik.
+					</aside>
+				</section>
+
+				<section data-background-color="#f8f8f8" data-background-iframe="https://observablehq.com/embed/@d3/hierarchical-edge-bundling/2@latest?cells=chart" data-background-interactive>
 					<aside class="notes">
 						Force-directed Graph – Knoten suchen ihre Gleichgewichtspositionen durch simulierte Physik.
 					</aside>
@@ -411,41 +443,9 @@ svg.selectAll("rect")
 					<p class="fragment" style="font-size: 0.75em; color: #ff5555;">⚠️ Projektion bewusst wählen — Mercator verzerrt Flächen!</p>
 				</section>
 
-				<section data-background-iframe="https://observablehq.com/embed/@d3/world-choropleth?cell=*" data-background-interactive>
+				<section data-background-iframe="https://www.geo-projections.com/" data-background-interactive>
 					<aside class="notes">
 						Choropleth Map – klassisch für Wahlkarten, Bevölkerungsdaten, etc.
-					</aside>
-				</section>
-
-
-				<!-- =====================================================
-				     05 – INSPIRATION
-				     ===================================================== -->
-
-				<section data-background-color="#282a36">
-					<p style="color: #bd93f9; font-size: 1.2em; letter-spacing: 0.2em; margin-bottom: 0.2em;">05</p>
-					<h2>Inspiration</h2>
-					<p style="color: #6272a4;">Künstler, Libraries & Ressourcen</p>
-					<aside class="notes">
-						Wer macht beeindruckende Dataviz? Und wie fangt ihr an?
-					</aside>
-				</section>
-
-				<section data-background-iframe="https://shirleywu.studio/" data-background-interactive>
-					<aside class="notes">
-						Shirley Wu – Film Flowers. Filmkritiken als Blumen. Jedes Blatt = eine Bewertungsdimension. Dataviz als Kunst mit echten Daten.
-					</aside>
-				</section>
-
-				<section data-background-iframe="https://www.visualcinnamon.com/portfolio/breathing-earth" data-background-interactive>
-					<aside class="notes">
-						Nadieh Bremer – Breathing Earth. Die Vegetation der Erde über ein Jahr als atmende Animation.
-					</aside>
-				</section>
-
-				<section data-background-iframe="https://truth-and-beauty.net/projects/rethinking-the-world" data-background-interactive>
-					<aside class="notes">
-						Moritz Stefaner – Rethinking the World für den OECD. Globale Entwicklungsdaten interaktiv.
 					</aside>
 				</section>
 
@@ -474,15 +474,45 @@ svg.selectAll("rect")
 					</aside>
 				</section>
 
+
+				<!-- =====================================================
+				     05 – INSPIRATION
+				     ===================================================== -->
+
+				<section data-background-color="#282a36">
+					<p style="color: #bd93f9; font-size: 1.2em; letter-spacing: 0.2em; margin-bottom: 0.2em;">05</p>
+					<h2>Inspiration</h2>
+					<p style="color: #6272a4;">Künstler, Libraries & Ressourcen</p>
+					<aside class="notes">
+						Wer macht beeindruckende Dataviz? Und wie fangt ihr an?
+					</aside>
+				</section>
+
+				<section data-background-iframe="https://www.datasketch.es/" data-background-interactive>
+					<aside class="notes">
+						Shirley Wu – Film Flowers. Filmkritiken als Blumen. Jedes Blatt = eine Bewertungsdimension. Dataviz als Kunst mit echten Daten.
+					</aside>
+				</section>
+
+				<section data-background-iframe="https://truth-and-beauty.net/" data-background-interactive>
+					<aside class="notes">
+						Moritz Stefaner – Rethinking the World für den OECD. Globale Entwicklungsdaten interaktiv.
+					</aside>
+				</section>
+
+				<section data-background-iframe="https://www.dataviz-inspiration.com/" data-background-interactive>
+					<aside class="notes">
+						Moritz Stefaner – Rethinking the World für den OECD. Globale Entwicklungsdaten interaktiv.
+					</aside>
+				</section>				
+
 				<section>
 					<h2>Getting Started</h2>
 					<p class="fragment" style="font-size: 0.85em; margin: 0.5em 0;">Standard-Charts → <a href="https://www.chartjs.org/">Chart.js</a>, <a href="https://www.highcharts.com/">Highcharts</a>, <a href="https://observablehq.com/">observable</a></p>
 					<p class="fragment" style="font-size: 0.85em; margin: 0.5em 0;">Custom Viz → <a href="https://d3js.org/">D3.js</a> + Svelte/React</p>
 					<p class="fragment" style="font-size: 0.85em; margin: 0.5em 0;">Prototyping → <a href="https://observablehq.com/">Observable</a></p>
 					<p class="fragment" style="font-size: 0.85em; margin: 0.5em 0;">Lernen → <a href="https://wattenberger.com/">Wattenberger</a>, <a href="https://www.youtube.com/@CurranKelleher">Curran Kelleher</a></p>
-					<p class="fragment" style="font-size: 0.82em; color: #6272a4; margin-top: 0.8em;">
-						→ Echten Datensatz nehmen. Einfach bauen. Learning by doing!
-					</p>
+					
 					<aside class="notes">
 						Mein Rat: Einfach anfangen. Observable ist perfekt um D3 ohne Build-Setup auszuprobieren. Amelia Wattenbergers interaktive Guides sind absolut hervorragend für den Einstieg.
 					</aside>
