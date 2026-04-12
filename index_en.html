@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -21,39 +21,30 @@
 				     ===================================================== -->
 
 				<section>
-					<h1>Datenvisualisierung im Web</h1>
+					<h1>Data Visualization on the Web</h1>
 					<p style="color: #6272a4;">Freiburg Frontend Meetup</p>
 					<aside class="notes">
-						Herzlich willkommen! Heute nehme ich euch mit in die Welt der Datenvisualisierung im Browser.
+						Welcome! Today I'll take you into the world of data visualization in the browser.
 					</aside>
 				</section>
 
-				<section>
-					<h2>Über mich</h2>
-					<p style="color: #6272a4;"><strong>2015:</strong> Dataviz mit R in der Wissenschaft</p>
-					<div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem;">
-						<img src="images/datavizR.png" alt="Dataviz mit R" style="max-height: 300px; object-fit: contain;">
-						<img src="images/datavizR1.png" alt="Dataviz mit R 1" style="max-height: 300px; object-fit: contain;">
-					</div>
-				</section>
-
-				<section data-background-iframe="https://freiburg-trees.vercel.app/" data-background-interactive>
+				<section data-background-iframe="https://stefanreifenberg.com" data-background-interactive>
 					<aside class="notes">
-						Kurz zu mir: [persönliche Vorstellung]
+						A bit about me: [personal introduction]
 					</aside>
 				</section>
 
 				<section>
 					<h2>Agenda</h2>
 					<ol style="font-size: 0.85em; line-height: 2;">
-						<li class="fragment"><strong>The Essentials:</strong> Was macht eine Viz wirklich effektiv?</li>
-						<li class="fragment"><strong>The Craft:</strong> Das Handwerk hinter guten Charts</li>
-						<li class="fragment"><strong>Das Tech-Stack:</strong> D3.js & Svelte im Workflow</li>
-						<li class="fragment"><strong>Charts & Patterns:</strong> Von Shapes bis Netzwerke & Maps</li>
-						<li class="fragment"><strong>Inspiration:</strong> Tools, Ressourcen & Community</li>
+						<li class="fragment"><strong>The Essentials:</strong> What makes a viz truly effective?</li>
+						<li class="fragment"><strong>The Craft:</strong> The craft behind great charts</li>
+						<li class="fragment"><strong>The Tech Stack:</strong> D3.js & Svelte in practice</li>
+						<li class="fragment"><strong>Charts & Patterns:</strong> From shapes to networks & maps</li>
+						<li class="fragment"><strong>Inspiration:</strong> Tools, resources & community</li>
 					</ol>
 					<aside class="notes">
-						5 Kapitel, 20 Minuten – los geht's!
+						5 chapters, 20 minutes — let's go!
 					</aside>
 				</section>
 
@@ -65,31 +56,31 @@
 				<section data-background-color="#282a36">
 					<p style="color: #50fa7b; font-size: 1.2em; letter-spacing: 0.2em; margin-bottom: 0.2em;">01</p>
 					<h2>The Essentials</h2>
-					<p style="color: #6272a4;">Was macht eine Visualisierung wirklich effektiv?</p>
+					<p style="color: #6272a4;">What makes a visualization truly effective?</p>
 					<aside class="notes">
-						Bevor wir in Code eintauchen: Was ist eigentlich eine gute Dataviz?
+						Before we dive into code: what actually makes a good dataviz?
 					</aside>
 				</section>
 
 				<section>
-					<h2>Datenvisualisierung</h2>
-					<p class="fragment" style="font-size: 0.85em; margin-top: 0.5em;">ist die grasche Darstellung von
-Informationen und Daten.</p>
-					<p class="fragment" style="font-size: 0.85em; margin-top: 0.5em;">wandelt Datenwerte in visuelle,
-quantizierbare Formen um.</p>
-					<p class="fragment" style="font-size: 0.85em; margin-top: 0.5em;">hilft zu erkennen, entdecken,
-erklären und entscheiden.</p>
-<p class="fragment" style="font-size: 0.85em; margin-top: 0.5em;">ist einerseits eine Kunst und
-andererseits Wissenschaft.</p>
+					<h2>Data Visualization</h2>
+					<p class="fragment" style="font-size: 0.85em; margin-top: 0.5em;">is the graphical representation of
+information and data.</p>
+					<p class="fragment" style="font-size: 0.85em; margin-top: 0.5em;">transforms data values into visual,
+quantifiable forms.</p>
+					<p class="fragment" style="font-size: 0.85em; margin-top: 0.5em;">helps to recognize, discover,
+explain and decide.</p>
+					<p class="fragment" style="font-size: 0.85em; margin-top: 0.5em;">is on one hand an art and
+on the other hand a science.</p>
 					<aside class="notes">
-						Das ist die Definition von Datenvisualisierung. Es geht darum, Informationen visuell darzustellen, um Muster und Zusammenhänge zu erkennen. Es ist ein Werkzeug für Kommunikation, Analyse und Storytelling.
+						This is the definition of data visualization. It is about representing information visually in order to recognize patterns and relationships. It is a tool for communication, analysis and storytelling.
 					</aside>
-					
+
 				</section>
 
 				<section>
-					<h2>Visuelles Encoding</h2>
-					<p style="color: #6272a4; font-size: 0.8em; margin-bottom: 0.8em;">Datenwerte → visuelle Kanäle (Cleveland &amp; McGill, 1984)</p>
+					<h2>Visual Encoding</h2>
+					<p style="color: #6272a4; font-size: 0.8em; margin-bottom: 0.8em;">Data values → visual channels (Cleveland &amp; McGill, 1984)</p>
 					<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7em; font-size: 0.75em;">
 						<div class="fragment" style="background: rgba(80,250,123,0.15); padding: 0.6em; border-radius: 6px; text-align: center; border: 1px solid rgba(80,250,123,0.3);">
 							<svg width="64" height="32" style="display:block;margin:0 auto 4px;" aria-hidden="true">
@@ -98,7 +89,7 @@ andererseits Wissenschaft.</p>
 								<rect x="24" y="20" width="11" height="9"  fill="#50fa7b" rx="1"/>
 								<rect x="40" y="6"  width="11" height="23" fill="#50fa7b" rx="1"/>
 							</svg>
-							<strong style="color: #50fa7b;">Position</strong><br>am präzisesten ✓✓✓
+							<strong style="color: #50fa7b;">Position</strong><br>most precise ✓✓✓
 						</div>
 						<div class="fragment" style="background: rgba(139,233,253,0.15); padding: 0.6em; border-radius: 6px; text-align: center; border: 1px solid rgba(139,233,253,0.3);">
 							<svg width="64" height="32" style="display:block;margin:0 auto 4px;" aria-hidden="true">
@@ -106,7 +97,7 @@ andererseits Wissenschaft.</p>
 								<rect x="5" y="14" width="36" height="7" fill="#8be9fd" rx="2"/>
 								<rect x="5" y="24" width="20" height="7" fill="#8be9fd" rx="2"/>
 							</svg>
-							<strong style="color: #8be9fd;">Länge</strong><br>sehr präzise ✓✓
+							<strong style="color: #8be9fd;">Length</strong><br>very precise ✓✓
 						</div>
 						<div class="fragment" style="background: rgba(255,184,108,0.15); padding: 0.6em; border-radius: 6px; text-align: center; border: 1px solid rgba(255,184,108,0.3);">
 							<svg width="64" height="32" style="display:block;margin:0 auto 4px;" aria-hidden="true">
@@ -114,7 +105,7 @@ andererseits Wissenschaft.</p>
 								<circle cx="28" cy="22" r="8"  fill="#ffb86c"/>
 								<circle cx="52" cy="16" r="13" fill="#ffb86c"/>
 							</svg>
-							<strong style="color: #ffb86c;">Fläche</strong><br>gut ✓
+							<strong style="color: #ffb86c;">Area</strong><br>good ✓
 						</div>
 						<div class="fragment" style="background: rgba(255,121,198,0.15); padding: 0.6em; border-radius: 6px; text-align: center; border: 1px solid rgba(255,121,198,0.3);">
 							<svg width="64" height="32" style="display:block;margin:0 auto 4px;" aria-hidden="true">
@@ -122,7 +113,7 @@ andererseits Wissenschaft.</p>
 								<circle cx="32" cy="16" r="8" fill="#50fa7b"/>
 								<circle cx="53" cy="16" r="8" fill="#8be9fd"/>
 							</svg>
-							<strong style="color: #ff79c6;">Farbe (Hue)</strong><br>für Kategorien
+							<strong style="color: #ff79c6;">Color (Hue)</strong><br>for categories
 						</div>
 						<div class="fragment" style="background: rgba(189,147,249,0.15); padding: 0.6em; border-radius: 6px; text-align: center; border: 1px solid rgba(189,147,249,0.3);">
 							<svg width="64" height="32" style="display:block;margin:0 auto 4px;" aria-hidden="true">
@@ -130,7 +121,7 @@ andererseits Wissenschaft.</p>
 								<path d="M32,16 L43.3,22.5 A13,13,0,0,1,20.7,22.5 Z" fill="#bd93f9" opacity="0.55"/>
 								<path d="M32,16 L20.7,22.5 A13,13,0,0,1,32,3 Z" fill="#bd93f9" opacity="0.25"/>
 							</svg>
-							<strong style="color: #bd93f9;">Winkel</strong><br>ungenau ✗
+							<strong style="color: #bd93f9;">Angle</strong><br>imprecise ✗
 						</div>
 						<div class="fragment" style="background: rgba(241,250,140,0.15); padding: 0.6em; border-radius: 6px; text-align: center; border: 1px solid rgba(241,250,140,0.3);">
 							<svg width="64" height="32" style="display:block;margin:0 auto 4px;" aria-hidden="true">
@@ -138,48 +129,48 @@ andererseits Wissenschaft.</p>
 								<rect x="24" y="9" width="14" height="14" fill="#f1fa8c"/>
 								<polygon points="54,5 62,27 46,27" fill="#f1fa8c"/>
 							</svg>
-							<strong style="color: #f1fa8c;">Form</strong><br>für Kategorien
+							<strong style="color: #f1fa8c;">Shape</strong><br>for categories
 						</div>
 					</div>
 					<aside class="notes">
-						Das erklärt warum Balkendiagramme so mächtig sind – Position auf gemeinsamer Achse ist der präziseste Kanal. Und warum Tortendiagramme problematisch sind – Winkel vergleichen ist schwer.
+						This explains why bar charts are so powerful — position on a shared axis is the most precise channel. And why pie charts are problematic — comparing angles is hard.
 					</aside>
 				</section>
 
 				<section>
-					<h3>Welcher Chart passt?</h3>
+					<h3>Which chart fits?</h3>
 					<p class="fragment" style="font-size: 0.7em; color: #6272a4; margin-top: 0.4em;">
-						→ <a href="https://www.data-to-viz.com/" target="_blank">data-to-viz.com</a> — Interaktiver Entscheidungsbaum: Datenstruktur eingeben, passende Charts bekommen.
+						→ <a href="https://www.data-to-viz.com/" target="_blank">data-to-viz.com</a> — Interactive decision tree: enter your data structure, get matching charts.
 					</p>
 					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.4em; font-size: 0.75em; margin-top: 0.3em;">
 						<div class="fragment" style="padding: 0.25em 0.5em; border-left: 3px solid #50fa7b;">
-							<p style="color: #50fa7b; margin-bottom: 0.1em;"><strong>Vergleiche</strong></p>
+							<p style="color: #50fa7b; margin-bottom: 0.1em;"><strong>Comparisons</strong></p>
 							<p style="margin: 0;">Bar Chart, Lollipop, Heatmap</p>
 						</div>
 						<div class="fragment" style="padding: 0.25em 0.5em; border-left: 3px solid #8be9fd;">
-							<p style="color: #8be9fd; margin-bottom: 0.1em;"><strong>Zeitverläufe</strong></p>
+							<p style="color: #8be9fd; margin-bottom: 0.1em;"><strong>Time series</strong></p>
 							<p style="margin: 0;">Line Chart, Area Chart</p>
 						</div>
 						<div class="fragment" style="padding: 0.25em 0.5em; border-left: 3px solid #ffb86c;">
-							<p style="color: #ffb86c; margin-bottom: 0.1em;"><strong>Anteile</strong></p>
-							<p style="margin: 0;">Stacked Bar, Treemap <span style="color: #ff5555;">(kein Pie!)</span></p>
+							<p style="color: #ffb86c; margin-bottom: 0.1em;"><strong>Proportions</strong></p>
+							<p style="margin: 0;">Stacked Bar, Treemap <span style="color: #ff5555;">(no pie!)</span></p>
 						</div>
 						<div class="fragment" style="padding: 0.25em 0.5em; border-left: 3px solid #ff79c6;">
-							<p style="color: #ff79c6; margin-bottom: 0.1em;"><strong>Zusammenhänge</strong></p>
+							<p style="color: #ff79c6; margin-bottom: 0.1em;"><strong>Correlations</strong></p>
 							<p style="margin: 0;">Scatter Plot, Bubble Chart</p>
 						</div>
 						<div class="fragment" style="padding: 0.25em 0.5em; border-left: 3px solid #bd93f9;">
-							<p style="color: #bd93f9; margin-bottom: 0.1em;"><strong>Verteilungen</strong></p>
+							<p style="color: #bd93f9; margin-bottom: 0.1em;"><strong>Distributions</strong></p>
 							<p style="margin: 0;">Histogram, Violin, Box Plot</p>
 						</div>
 						<div class="fragment" style="padding: 0.25em 0.5em; border-left: 3px solid #f1fa8c;">
-							<p style="color: #f1fa8c; margin-bottom: 0.1em;"><strong>Geografie</strong></p>
+							<p style="color: #f1fa8c; margin-bottom: 0.1em;"><strong>Geography</strong></p>
 							<p style="margin: 0;">Choropleth, Bubble Map</p>
 						</div>
 					</div>
 
 					<aside class="notes">
-						data-to-viz.com ist meine erste Anlaufstelle wenn ich nicht sicher bin welcher Chart-Typ passt. Man gibt seine Datenstruktur ein (1 numerisch, 2 kategorisch, etc.) und bekommt einen Entscheidungsbaum mit passenden Chart-Typen inkl. Pros/Cons und Code-Beispielen.
+						data-to-viz.com is my first stop when I'm not sure which chart type fits. You enter your data structure (1 numeric, 2 categorical, etc.) and get a decision tree with suitable chart types including pros/cons and code examples.
 					</aside>
 				</section>
 
@@ -191,29 +182,29 @@ andererseits Wissenschaft.</p>
 				<section data-background-color="#282a36">
 					<p style="color: #ff79c6; font-size: 1.2em; letter-spacing: 0.2em; margin-bottom: 0.2em;">02</p>
 					<h2>The Craft</h2>
-					<p style="color: #6272a4;">Das Handwerk hinter guten Charts</p>
+					<p style="color: #6272a4;">The craft behind great charts</p>
 					<aside class="notes">
-						Technisch können wir fast alles bauen. Wie macht man es gut?
+						Technically we can build almost anything. How do you do it well?
 					</aside>
 				</section>
 
 				<section>
-					<h2>Die Kernfrage</h2>
+					<h2>The Core Question</h2>
 					<h3 class="fragment" style="color: #50fa7b; font-size: 1.5em; margin-top: 0.5em;">"So what?"</h3>
 					<p class="fragment" style="font-size: 0.85em; margin-top: 0.8em; line-height: 1.7;">
-						Jeder Chart braucht eine klare Botschaft.<br>
-						<span style="color: #6272a4;">Wenn du sie nicht in einem Satz formulieren kannst,<br>ist der Chart noch nicht fertig.</span>
+						Every chart needs a clear message.<br>
+						<span style="color: #6272a4;">If you can't state it in one sentence,<br>the chart isn't done yet.</span>
 					</p>
 					<aside class="notes">
-						Das ist die wichtigste Frage. Was soll der Nutzer mitnehmen? Die Überschrift sollte die Botschaft sein, nicht nur den Inhalt beschreiben. "Umsatz 2024" ist keine Botschaft. "Umsatz wächst trotz Inflation" ist eine.
+						This is the most important question. What should the user take away? The title should convey the message, not just describe the content. "Revenue 2024" is not a message. "Revenue grows despite inflation" is.
 					</aside>
 				</section>
 
 				<section>
-					<h2>Explorative Datenanalyse (EDA)</h2>
-					<p class="fragment" style="font-size: 0.85em; margin-top: 0.5em;">Bevor du eine Botschaft formulierst, musst du die Daten verstehen.</p>
-					<p class="fragment" style="font-size: 0.85em; margin-top: 0.5em;">Datenvisualisierung ist der Schlüssel zur Datenexploration.</p>
-					<p class="fragment" style="font-size: 0.85em; margin-top: 0.5em;">EDA hilft, Muster, Ausreißer und Zusammenhänge in den Daten zu erkennen.</p>
+					<h2>Exploratory Data Analysis (EDA)</h2>
+					<p class="fragment" style="font-size: 0.85em; margin-top: 0.5em;">Before you can formulate a message, you need to understand the data.</p>
+					<p class="fragment" style="font-size: 0.85em; margin-top: 0.5em;">Data visualization is the key to data exploration.</p>
+					<p class="fragment" style="font-size: 0.85em; margin-top: 0.5em;">EDA helps identify patterns, outliers, and relationships in the data.</p>
 					<p class="fragment" style="font-size: 0.85em; margin-top: 0.5em;"><a href="https://r4ds.had.co.nz/exploratory-data-analysis.html" target="_blank">EDA in R</a></p>
 				</section>
 
@@ -223,108 +214,90 @@ andererseits Wissenschaft.</p>
 					<h2>Dos &amp; Don'ts</h2>
 					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2em; font-size: 0.8em; margin-top: 0.5em;">
 						<div>
-							<p style="color: #50fa7b; margin-bottom: 0.5em;"><strong>✓ Tun</strong></p>
-							<p class="fragment">Aussagekräftige Titel & Labels</p>
-							<p class="fragment">Y-Achse bei 0 beginnen</p>
-							<p class="fragment">Farbe sparsam & bedeutungsvoll</p>
-							<p class="fragment">Datenquelle nennen</p>
+							<p style="color: #50fa7b; margin-bottom: 0.5em;"><strong>✓ Do</strong></p>
+							<p class="fragment">Meaningful titles & labels</p>
+							<p class="fragment">Start Y-axis at 0</p>
+							<p class="fragment">Use color sparingly & meaningfully</p>
+							<p class="fragment">Cite your data source</p>
 						</div>
 						<div>
-							<p style="color: #ff5555; margin-bottom: 0.5em;"><strong>✗ Lassen</strong></p>
-							<p class="fragment">3D-Effekte ohne Nutzen</p>
-							<p class="fragment">Regenbogen-Farbverläufe</p>
-							<p class="fragment">Abgeschnittene Y-Achse</p>
-							<p class="fragment">Pie Charts für &gt; 4 Kategorien</p>
+							<p style="color: #ff5555; margin-bottom: 0.5em;"><strong>✗ Avoid</strong></p>
+							<p class="fragment">3D effects without purpose</p>
+							<p class="fragment">Rainbow color gradients</p>
+							<p class="fragment">Truncated Y-axis</p>
+							<p class="fragment">Pie charts for &gt; 4 categories</p>
 						</div>
 					</div>
 					<aside class="notes">
-						Edward Tufte: "Data-Ink Ratio" – jeder Pixel sollte Daten repräsentieren. Die abgeschnittene Y-Achse ist der häufigste Trick um Visualisierungen irreführend zu machen.
+						Edward Tufte: "Data-Ink Ratio" — every pixel should represent data. The truncated Y-axis is the most common trick to make visualizations misleading.
 					</aside>
 				</section> -->
 
 				<section>
 					<h2>Data Storytelling</h2>
-					<p class="fragment" style="font-size: 0.87em; margin-top: 0.5em;">Daten allein überzeugen selten.</p>
-					<p class="fragment" style="font-size: 0.87em;">Eine <strong>Geschichte</strong> macht Daten unvergesslich.</p>
+					<p class="fragment" style="font-size: 0.87em; margin-top: 0.5em;">Data alone rarely convinces.</p>
+					<p class="fragment" style="font-size: 0.87em;">A <strong>story</strong> makes data memorable.</p>
 					<div class="fragment" style="margin-top: 1em; font-size: 0.8em; display: flex; justify-content: space-around; align-items: center;">
-						<span style="color: #8be9fd;">Kontext</span>
+						<span style="color: #8be9fd;">Context</span>
 						<span style="color: #6272a4;">→</span>
-						<span style="color: #ffb86c;">Spannung</span>
+						<span style="color: #ffb86c;">Tension</span>
 						<span style="color: #6272a4;">→</span>
-						<span style="color: #ff79c6;">Auflösung</span>
+						<span style="color: #ff79c6;">Resolution</span>
 						<span style="color: #6272a4;">→</span>
-						<span style="color: #50fa7b;">Handlung</span>
+						<span style="color: #50fa7b;">Action</span>
 					</div>
 					<aside class="notes">
-						Scrollytelling ist eine sehr effektive Technik im Web dafür. The Pudding ist das beste Beispiel.
+						Scrollytelling is a very effective technique for this on the web. The Pudding is the best example.
 					</aside>
 				</section>
 
 								<!-- chartosaur image section -->
 				<section>
-					<div class="r-stack">
-						<img src="/images/chartosaur1.png" alt="Chartosaur - Show the data" style="width: 100%; max-width: 400px; margin: 0 auto; display: block; clip-path: inset(0 0 48% 0);">
-						<img src="/images/chartosaur1.png" alt="Chartosaur - Show the point" class="fragment" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
-					</div>
+					<img src="/images/chartosaur1.png" alt="Chartosaur" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
 				</section>
 				<section>
-					<div class="r-stack">
-						<img src="/images/chartosaur2.png" alt="Chartosaur - Show the data" style="width: 100%; max-width: 400px; margin: 0 auto; display: block; clip-path: inset(0 0 48% 0);">
-						<img src="/images/chartosaur2.png" alt="Chartosaur - Show the distribution" class="fragment" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
-					</div>
+					<img src="/images/chartosaur2.png" alt="Chartosaur" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
 				</section>
 				<section>
-					<div class="r-stack">
-						<img src="/images/chartosaur3.png" alt="Chartosaur - Show the data" style="width: 100%; max-width: 400px; margin: 0 auto; display: block; clip-path: inset(0 0 48% 0);">
-						<img src="/images/chartosaur3.png" alt="Chartosaur - Show the meaning" class="fragment" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
-					</div>
+					<img src="/images/chartosaur3.png" alt="Chartosaur" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
 				</section>
 				<section>
-					<div class="r-stack">
-						<img src="/images/chartosaur4.png" alt="Chartosaur - Show the data" style="width: 100%; max-width: 400px; margin: 0 auto; display: block; clip-path: inset(0 0 48% 0);">
-						<img src="/images/chartosaur4.png" alt="Chartosaur - Show the point" class="fragment" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
-					</div>
+					<img src="/images/chartosaur4.png" alt="Chartosaur" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
 				</section>
 				<section>
-					<div class="r-stack">
-						<img src="/images/chartosaur5.png" alt="Chartosaur - Show the data" style="width: 100%; max-width: 400px; margin: 0 auto; display: block; clip-path: inset(0 0 48% 0);">
-						<img src="/images/chartosaur5.png" alt="Chartosaur - Show the variability" class="fragment" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
-					</div>
+					<img src="/images/chartosaur5.png" alt="Chartosaur" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
 				</section>
 				<section>
-					<div class="r-stack">
-						<img src="/images/chartosaur6.png" alt="Chartosaur - Show the data" style="width: 100%; max-width: 400px; margin: 0 auto; display: block; clip-path: inset(0 0 48% 0);">
-						<img src="/images/chartosaur6.png" alt="Chartosaur - Show the difference" class="fragment" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
-					</div>
+					<img src="/images/chartosaur6.png" alt="Chartosaur" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
 				</section>
 
 				<section data-background-iframe="https://pudding.cool" data-background-interactive>
 					<aside class="notes">
-						The Pudding – Visual Essays. Scrollytelling auf höchstem Niveau. Achtet wie Text und Visualisierung miteinander verwoben sind.
+						The Pudding – Visual Essays. Scrollytelling at the highest level. Notice how text and visualization are interwoven.
 					</aside>
 				</section>
 
 
 				<!-- =====================================================
-				     03 – DAS TECH-STACK
+				     03 – THE TECH STACK
 				     ===================================================== -->
 
 				<section data-background-color="#282a36">
 					<p style="color: #ffb86c; font-size: 1.2em; letter-spacing: 0.2em; margin-bottom: 0.2em;">03</p>
-					<h2>Tech-Stack</h2>
-					<p style="color: #6272a4;">JavaScript, D3.js & Svelte</p>
+					<h2>Tech Stack</h2>
+					<p style="color: #6272a4;">JavaScript, D3.js & Svelte in practice</p>
 					<aside class="notes">
-						Der moderne Stack für Web-Dataviz: D3 für die Mathematik, Svelte für das Rendering.
+						The modern stack for web dataviz: D3 for the math, Svelte for rendering.
 					</aside>
 				</section>
 
 				<section>
 					<h2><a href="https://d3js.org/" target="_blank">D3.js</a></h2>
 					<h3 style="color: #6272a4;">Data-Driven Documents</h3>
-					<p class="fragment" style="font-size: 0.85em; margin-top: 0.6em;">Kein Chart-Tool — ein <strong>Ökosystem von Modulen</strong>.</p>
+					<p class="fragment" style="font-size: 0.85em; margin-top: 0.6em;">Not a chart tool — an <strong>ecosystem of modules</strong>.</p>
 					<p class="fragment" style="font-size: 0.8em; color: #6272a4; margin-top: 0.3em;">Scales · Shapes · Layouts · Projections · Axes · Transitions …</p>
 					<pre class="fragment"><code class="javascript" data-trim>
-// Daten → DOM-Elemente
+// Data → DOM elements
 svg.selectAll("rect")
   .data(dataset)
   .join("rect")
@@ -332,7 +305,7 @@ svg.selectAll("rect")
   .attr("height", d => height - yScale(d.value));
 					</code></pre>
 					<aside class="notes">
-						D3 ist seit 2011 der Standard. Wichtig: Es ist kein "baut mir einen Chart"-Tool. Es übersetzt Daten in visuelle Elemente. .data() bindet Arrays an DOM-Elemente, .join() kümmert sich um Enter, Update und Exit.
+						D3 has been the standard since 2011. Important: it's not a "build me a chart" tool. It translates data into visual elements. .data() binds arrays to DOM elements, .join() handles enter, update, and exit.
 					</aside>
 				</section>
 
@@ -340,53 +313,53 @@ svg.selectAll("rect")
 					<h2>D3.js vs. Observable vs. Observable Plot</h2>
 					<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7em; font-size: 0.75em;">
 						<div style="background: rgba(80,250,123,0.1); border: 1px solid rgba(80,250,123,0.3); border-radius: 6px; padding: 0.8em;">
-							<p style="color: #50fa7b; margin-bottom: 0.4em;"><strong><a href="https://d3js.org/" target="_blank">D3.js</a></strong></p>
-							<p>Flexibel, aber mehr Boilerplate.<br>Ideal für maßgeschneiderte Visualisierungen.</p>
+							<p style="color: #50fa7b; margin-bottom: 0.4em;"><strong>D3.js</strong></p>
+							<p>Flexible, but more boilerplate.<br>Ideal for custom visualizations.</p>
 						</div>
 						<div style="background: rgba(139,233,253,0.1); border: 1px solid rgba(139,233,253,0.3); border-radius: 6px; padding: 0.8em;">
-							<p style="color: #8be9fd; margin-bottom: 0.4em;"><strong><a href="https://observablehq.com/" target="_blank">Observable</a></strong></p>
-							<p>Interaktive Notebooks mit D3-Integration.<br>Perfekt für Prototyping & Teilen.</p>
+							<p style="color: #8be9fd; margin-bottom: 0.4em;"><strong>Observable</strong></p>
+							<p>Interactive notebooks with D3 integration.<br>Perfect for prototyping & sharing.</p>
 						</div>
 						<div style="background: rgba(255,184,108,0.1); border: 1px solid rgba(255,184,108,0.3); border-radius: 6px; padding: 0.8em;">
-							<p style="color: #ffb86c; margin-bottom: 0.4em;"><strong><a href="https://observablehq.com/plot/" target="_blank">Observable Plot</a></strong></p>
-							<p>Hochwertige Charts mit minimalem Code.<br>Gut für schnelle Analysen & Standardcharts.</p>
+							<p style="color: #ffb86c; margin-bottom: 0.4em;"><strong>Observable Plot</strong></p>
+							<p>High-quality charts with minimal code.<br>Great for quick analysis & standard charts.</p>
 						</div>
 				</section>
 
 				<!-- <section data-background-color="#f8f8f8" data-background-iframe="https://observablehq.com/embed/@d3/horizontal-bar-chart/2?cells=chart" data-background-interactive>
 					<aside class="notes">
-						Einfacher D3 Bar Chart auf Observable. Observable ist übrigens ein tolles Prototyping-Tool – dazu gleich mehr.
+						Simple D3 bar chart on Observable. Observable is a great prototyping tool — more on that in a moment.
 					</aside>
 				</section> -->
 
 				<section>
 					<h2>D3 + Svelte</h2>
-					<p style="color: #ffb86c; font-size: 0.9em;">Das ideale Duo</p>
+					<p style="color: #ffb86c; font-size: 0.9em;">The ideal duo</p>
 					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em; font-size: 0.78em; margin-top: 0.8em;">
 						<div style="background: rgba(139,233,253,0.1); border: 1px solid rgba(139,233,253,0.3); border-radius: 6px; padding: 0.8em;">
-							<p style="color: #8be9fd; margin-bottom: 0.4em;"><strong>D3 übernimmt:</strong></p>
-							<p>Scales, Layouts, Shapes,<br>Projections, Berechnungen</p>
+							<p style="color: #8be9fd; margin-bottom: 0.4em;"><strong>D3 handles:</strong></p>
+							<p>Scales, Layouts, Shapes,<br>Projections, Calculations</p>
 						</div>
 						<div style="background: rgba(80,250,123,0.1); border: 1px solid rgba(80,250,123,0.3); border-radius: 6px; padding: 0.8em;">
-							<p style="color: #50fa7b; margin-bottom: 0.4em;"><strong>Svelte übernimmt:</strong></p>
-							<p>Reaktives Rendering,<br>Animationen, State, DOM</p>
+							<p style="color: #50fa7b; margin-bottom: 0.4em;"><strong>Svelte handles:</strong></p>
+							<p>Reactive rendering,<br>Animations, State, DOM</p>
 						</div>
 					</div>
 					<p class="fragment" style="margin-top: 0.8em; font-size: 0.78em; color: #6272a4;">
-						Kein Virtual DOM — Svelte kompiliert zu nativem JS → top Performance.
+						No virtual DOM — Svelte compiles to native JS → top performance.
 					</p>
 					<aside class="notes">
-						Sveltes reaktives System passt perfekt: Wenn sich Daten ändern, updaten sich die Visualisierungen automatisch. D3 rechnet, Svelte rendert. Das NYT Graphics Team nutzt übrigens genau diesen Stack!
+						Svelte's reactive system is a perfect fit: when data changes, visualizations update automatically. D3 calculates, Svelte renders. The NYT Graphics Team uses exactly this stack!
 					</aside>
 				</section>
 
 				<section data-background-iframe="https://datavisualizationwithsvelte.com/" data-background-interactive>
-				
+
 				</section>
 
 				<section>
 					<h2><a href="https://next.layerchart.com/" target="_blank">LayerChart</a></h2>
-					<p style="font-size: 0.85em;">Svelte + D3 — deklarative Chart-Komponenten</p>
+					<p style="font-size: 0.85em;">Svelte + D3 — declarative chart components</p>
 					<pre><code class="html" data-trim style="font-size: 0.78em;">
 &lt;Chart data={salesData} x="month" y="revenue"&gt;
   &lt;Svg&gt;
@@ -394,13 +367,13 @@ svg.selectAll("rect")
     &lt;Axis placement="bottom" /&gt;
     &lt;Bars /&gt;
     &lt;Tooltip.Root&gt;
-      &lt;Tooltip.Item label="Umsatz" /&gt;
+      &lt;Tooltip.Item label="Revenue" /&gt;
     &lt;/Tooltip.Root&gt;
   &lt;/Svg&gt;
 &lt;/Chart&gt;
 					</code></pre>
 					<aside class="notes">
-						LayerChart abstrahiert D3 in deklarative Svelte-Komponenten. Schnell produktiv, aber mit D3-Power dahinter.
+						LayerChart abstracts D3 into declarative Svelte components. Quickly productive, but with D3 power behind it.
 					</aside>
 				</section>
 
@@ -412,9 +385,9 @@ svg.selectAll("rect")
 				<section data-background-color="#282a36">
 					<p style="color: #8be9fd; font-size: 1.2em; letter-spacing: 0.2em; margin-bottom: 0.2em;">04</p>
 					<h2>Charts & Patterns</h2>
-					<p style="color: #6272a4;">Hierarchien, Netzwerke & Maps</p>
+					<p style="color: #6272a4;">Hierarchies, Networks & Maps</p>
 					<aside class="notes">
-						Was D3 jenseits von Balken- und Liniendiagrammen kann.
+						What D3 can do beyond bar and line charts.
 					</aside>
 				</section>
 
@@ -422,23 +395,23 @@ svg.selectAll("rect")
 					<h2>Rendering: SVG vs. Canvas vs. WebGL</h2>
 					<div style="margin-top: 0.6em; font-size: 0.82em;">
 						<p class="fragment" style="padding: 0.4em 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
-							<strong style="color: #50fa7b;">SVG</strong> &nbsp;→&nbsp; &lt; 1.000 Elemente &nbsp;·&nbsp; DOM &nbsp;·&nbsp; CSS &nbsp;·&nbsp; Accessibility ✓
+							<strong style="color: #50fa7b;">SVG</strong> &nbsp;→&nbsp; &lt; 1,000 elements &nbsp;·&nbsp; DOM &nbsp;·&nbsp; CSS &nbsp;·&nbsp; Accessibility ✓
 						</p>
 						<p class="fragment" style="padding: 0.4em 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
-							<strong style="color: #ffb86c;">Canvas 2D</strong> &nbsp;→&nbsp; bis 10.000 Elemente &nbsp;·&nbsp; Pixel-basiert
+							<strong style="color: #ffb86c;">Canvas 2D</strong> &nbsp;→&nbsp; up to 10,000 elements &nbsp;·&nbsp; pixel-based
 						</p>
 						<p class="fragment" style="padding: 0.4em 0;">
-							<strong style="color: #ff79c6;">WebGL</strong> &nbsp;→&nbsp; 100.000+ Elemente &nbsp;·&nbsp; GPU &nbsp;·&nbsp; 3D
+							<strong style="color: #ff79c6;">WebGL</strong> &nbsp;→&nbsp; 100,000+ elements &nbsp;·&nbsp; GPU &nbsp;·&nbsp; 3D
 						</p>
 					</div>
 					<aside class="notes">
-						Für die meisten Dashboard-Charts: SVG. Für große Datensätze: Canvas. Für Geodaten / 3D: WebGL.
+						For most dashboard charts: SVG. For large datasets: Canvas. For geodata / 3D: WebGL.
 					</aside>
 				</section>
 
 				<section>
-					<h2>Hierarchien</h2>
-					<p style="color: #6272a4;">Bäume, Verschachtelungen, Teil-Ganzes</p>
+					<h2>Hierarchies</h2>
+					<p style="color: #6272a4;">Trees, nesting, part-to-whole</p>
 					<p class="fragment" style="font-size: 0.85em; margin-top: 0.6em;">
 						<code style="color: #50fa7b;">d3.hierarchy()</code> + <code style="color: #ffb86c;">d3.treemap()</code> / <code style="color: #8be9fd;">d3.pack()</code>
 					</p>
@@ -447,48 +420,48 @@ svg.selectAll("rect")
 				<section data-background-color="#f8f8f8">
 					<iframe src="https://observablehq.com/embed/@d3/pack/2?cells=chart" style="width:100%;height:100vh;border:none;" scrolling="no"></iframe>
 					<aside class="notes">
-						Treemap – Fläche repräsentiert Größe. Gut für Vergleiche auf mehreren Hierarchieebenen.
+						Treemap – area represents size. Good for comparisons across multiple hierarchy levels.
 					</aside>
 				</section>
 
 				<section>
-					<h2>Netzwerke & Beziehungen</h2>
-					<p style="color: #6272a4;">Knoten (Nodes) & Verbindungen (Edges)</p>
+					<h2>Networks & Relationships</h2>
+					<p style="color: #6272a4;">Nodes & Edges</p>
 					<p class="fragment" style="font-size: 0.85em; margin-top: 0.6em;">
-						<code style="color: #50fa7b;">d3.forceSimulation()</code> — Physik-basiertes Layout
+						<code style="color: #50fa7b;">d3.forceSimulation()</code> — physics-based layout
 					</p>
 				</section>
 
 				<section data-background-color="#f8f8f8" data-background-iframe="https://observablehq.com/embed/fcbc77e23fbd958c?cells=chart" data-background-interactive>
 					<aside class="notes">
-						Force-directed Graph – Knoten suchen ihre Gleichgewichtspositionen durch simulierte Physik.
+						Force-directed graph — nodes find their equilibrium positions through simulated physics.
 					</aside>
 				</section>
 
 				<section data-background-color="#f8f8f8" data-background-iframe="https://observablehq.com/embed/@d3/sankey/2?cells=chart" data-background-interactive>
 					<aside class="notes">
-						Force-directed Graph – Knoten suchen ihre Gleichgewichtspositionen durch simulierte Physik.
+						Sankey diagram — shows flow and distribution across stages.
 					</aside>
 				</section>
 
 				<section data-background-color="#f8f8f8" data-background-iframe="https://observablehq.com/embed/@d3/hierarchical-edge-bundling/2@latest?cells=chart" data-background-interactive>
 					<aside class="notes">
-						Force-directed Graph – Knoten suchen ihre Gleichgewichtspositionen durch simulierte Physik.
+						Hierarchical edge bundling — reveals relationships within a hierarchy without visual noise.
 					</aside>
 				</section>
 
 				<section>
 					<h2>Maps</h2>
-					<p style="color: #6272a4;">Geografische Daten im räumlichen Kontext</p>
+					<p style="color: #6272a4;">Geographic data in spatial context</p>
 					<p class="fragment" style="font-size: 0.85em; margin-top: 0.6em;">
-						<code style="color: #50fa7b;">d3.geoProjection()</code> — 50+ Projektionen
+						<code style="color: #50fa7b;">d3.geoProjection()</code> — 50+ projections
 					</p>
-					<p class="fragment" style="font-size: 0.75em; color: #ff5555;">⚠️ Projektion bewusst wählen — Mercator verzerrt Flächen!</p>
+					<p class="fragment" style="font-size: 0.75em; color: #ff5555;">⚠️ Choose projection deliberately — Mercator distorts areas!</p>
 				</section>
 
 				<section data-background-iframe="https://www.geo-projections.com/" data-background-interactive>
 					<aside class="notes">
-						Choropleth Map – klassisch für Wahlkarten, Bevölkerungsdaten, etc.
+						Choropleth Map — classic for election maps, population data, etc.
 					</aside>
 				</section>
 
@@ -501,10 +474,10 @@ svg.selectAll("rect")
 						</div>
 						<div class="fragment" style="padding: 0.4em 0.6em; border-left: 3px solid #8be9fd;">
 							<strong style="color: #8be9fd;">React</strong><br>
-							<a href="https://recharts.org/">Recharts</a> · <a href="https://tremor.so/" target="_blank">Tremor</a>
+							<a href="https://recharts.org/">Recharts</a> · <a href="https://nivo.rocks/">Nivo</a> · <a href="https://airbnb.io/visx/">visx</a>
 						</div>
 						<div class="fragment" style="padding: 0.4em 0.6em; border-left: 3px solid #ffb86c;">
-							<strong style="color: #ffb86c;">Agnostisch</strong><br>
+							<strong style="color: #ffb86c;">Agnostic</strong><br>
 							<a href="https://www.chartjs.org/">Chart.js</a> · <a href="https://echarts.apache.org/">ECharts</a>
 						</div>
 						<div class="fragment" style="padding: 0.4em 0.6em; border-left: 3px solid #ff79c6;">
@@ -513,7 +486,7 @@ svg.selectAll("rect")
 						</div>
 					</div>
 					<aside class="notes">
-						Der Hinweis: Nicht immer D3 von Grund auf. Für Standard-Charts eine Library nehmen, für einzigartige Visualisierungen D3 direkt.
+						The tip: don't always use D3 from scratch. Use a library for standard charts, D3 directly for unique visualizations.
 					</aside>
 				</section>
 
@@ -525,51 +498,51 @@ svg.selectAll("rect")
 				<section data-background-color="#282a36">
 					<p style="color: #bd93f9; font-size: 1.2em; letter-spacing: 0.2em; margin-bottom: 0.2em;">05</p>
 					<h2>Inspiration</h2>
-					<p style="color: #6272a4;">Künstler, Libraries & Ressourcen</p>
+					<p style="color: #6272a4;">Artists, Libraries & Resources</p>
 					<aside class="notes">
-						Wer macht beeindruckende Dataviz? Und wie fangt ihr an?
+						Who makes impressive dataviz? And how do you get started?
 					</aside>
 				</section>
 
 				<section data-background-iframe="https://www.datasketch.es/" data-background-interactive>
 					<aside class="notes">
-						Shirley Wu – Film Flowers. Filmkritiken als Blumen. Jedes Blatt = eine Bewertungsdimension. Dataviz als Kunst mit echten Daten.
+						Shirley Wu – Film Flowers. Film reviews as flowers. Each petal = one rating dimension. Dataviz as art with real data.
 					</aside>
 				</section>
 
 				<section data-background-iframe="https://truth-and-beauty.net/" data-background-interactive>
 					<aside class="notes">
-						Moritz Stefaner – Rethinking the World für den OECD. Globale Entwicklungsdaten interaktiv.
+						Moritz Stefaner – Rethinking the World for the OECD. Global development data made interactive.
 					</aside>
 				</section>
 
 				<section data-background-iframe="https://www.dataviz-inspiration.com/" data-background-interactive>
 					<aside class="notes">
-						Moritz Stefaner – Rethinking the World für den OECD. Globale Entwicklungsdaten interaktiv.
-					</aside>
-				</section>				
-
-				<section>
-					<h2>Getting Started</h2>
-					<p class="fragment" style="font-size: 0.85em; margin: 0.5em 0;">Standard-Charts → <a href="https://www.chartjs.org/">Chart.js</a>, <a href="https://www.highcharts.com/">Highcharts</a>, <a href="https://observablehq.com/">observable</a></p>
-					<p class="fragment" style="font-size: 0.85em; margin: 0.5em 0;">Custom Viz → <a href="https://d3js.org/">D3.js</a> + Svelte/React</p>
-					<p class="fragment" style="font-size: 0.85em; margin: 0.5em 0;">Prototyping → <a href="https://observablehq.com/">Observable</a></p>
-					<p class="fragment" style="font-size: 0.85em; margin: 0.5em 0;">Lernen → <a href="https://wattenberger.com/">Wattenberger</a>, <a href="https://www.youtube.com/@CurranKelleher">Curran Kelleher</a></p>
-					
-					<aside class="notes">
-						Mein Rat: Einfach anfangen. Observable ist perfekt um D3 ohne Build-Setup auszuprobieren. Amelia Wattenbergers interaktive Guides sind absolut hervorragend für den Einstieg.
+						A curated gallery of the most impressive dataviz work on the web.
 					</aside>
 				</section>
 
-				<!-- Danke -->
 				<section>
-					<h2>Danke! 🙏</h2>
-					<p style="margin-top: 1em;">Fragen?</p>
+					<h2>Getting Started</h2>
+					<p class="fragment" style="font-size: 0.85em; margin: 0.5em 0;">Standard charts → <a href="https://www.chartjs.org/">Chart.js</a>, <a href="https://www.highcharts.com/">Highcharts</a>, <a href="https://observablehq.com/">Observable</a></p>
+					<p class="fragment" style="font-size: 0.85em; margin: 0.5em 0;">Custom viz → <a href="https://d3js.org/">D3.js</a> + Svelte/React</p>
+					<p class="fragment" style="font-size: 0.85em; margin: 0.5em 0;">Prototyping → <a href="https://observablehq.com/">Observable</a></p>
+					<p class="fragment" style="font-size: 0.85em; margin: 0.5em 0;">Learning → <a href="https://wattenberger.com/">Wattenberger</a>, <a href="https://www.youtube.com/@CurranKelleher">Curran Kelleher</a></p>
+
+					<aside class="notes">
+						My advice: just start. Observable is perfect for trying D3 without a build setup. Amelia Wattenberger's interactive guides are absolutely excellent for getting started.
+					</aside>
+				</section>
+
+				<!-- Thank you -->
+				<section>
+					<h2>Thank you! 🙏</h2>
+					<p style="margin-top: 1em;">Questions?</p>
 					<p style="margin-top: 0.8em; font-size: 0.8em; color: #6272a4;">
 						<a href="https://stefanreifenberg.com" target="_blank">stefanreifenberg.com</a>
 					</p>
 					<aside class="notes">
-						Vielen Dank! Hat jemand schon Erfahrung mit D3 oder einer der Libraries?
+						Thank you! Does anyone already have experience with D3 or any of the libraries?
 					</aside>
 				</section>
 			</div>

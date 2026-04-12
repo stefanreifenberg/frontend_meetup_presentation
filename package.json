@@ -10,6 +10,7 @@
   "scripts": {
     "test": "gulp test",
     "start": "gulp serve",
+    "start:en": "gulp serve & sleep 2 && open http://localhost:8000/index_en.html",
     "build": "gulp build"
   },
   "author": {
