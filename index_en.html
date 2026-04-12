@@ -28,7 +28,16 @@
 					</aside>
 				</section>
 
-				<section data-background-iframe="https://stefanreifenberg.com" data-background-interactive>
+				<section>
+					<h2>About me</h2>
+					<p style="color: #6272a4;"><strong>2015:</strong> Dataviz with R in research</p>
+					<div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem;">
+						<img src="images/datavizR.png" alt="Dataviz with R" style="max-height: 300px; object-fit: contain;">
+						<img src="images/datavizR1.png" alt="Dataviz with R 1" style="max-height: 300px; object-fit: contain;">
+					</div>
+				</section>
+
+				<section data-background-iframe="https://freiburg-trees.vercel.app/" data-background-interactive>
 					<aside class="notes">
 						A bit about me: [personal introduction]
 					</aside>
@@ -253,22 +262,40 @@ on the other hand a science.</p>
 
 								<!-- chartosaur image section -->
 				<section>
-					<img src="/images/chartosaur1.png" alt="Chartosaur" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
+					<div class="r-stack">
+						<img src="/images/chartosaur1.png" alt="Chartosaur - Show the data" style="width: 100%; max-width: 400px; margin: 0 auto; display: block; clip-path: inset(0 0 48% 0);">
+						<img src="/images/chartosaur1.png" alt="Chartosaur - Show the point" class="fragment" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
+					</div>
 				</section>
 				<section>
-					<img src="/images/chartosaur2.png" alt="Chartosaur" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
+					<div class="r-stack">
+						<img src="/images/chartosaur2.png" alt="Chartosaur - Show the data" style="width: 100%; max-width: 400px; margin: 0 auto; display: block; clip-path: inset(0 0 48% 0);">
+						<img src="/images/chartosaur2.png" alt="Chartosaur - Show the distribution" class="fragment" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
+					</div>
 				</section>
 				<section>
-					<img src="/images/chartosaur3.png" alt="Chartosaur" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
+					<div class="r-stack">
+						<img src="/images/chartosaur3.png" alt="Chartosaur - Show the data" style="width: 100%; max-width: 400px; margin: 0 auto; display: block; clip-path: inset(0 0 48% 0);">
+						<img src="/images/chartosaur3.png" alt="Chartosaur - Show the meaning" class="fragment" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
+					</div>
 				</section>
 				<section>
-					<img src="/images/chartosaur4.png" alt="Chartosaur" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
+					<div class="r-stack">
+						<img src="/images/chartosaur4.png" alt="Chartosaur - Show the data" style="width: 100%; max-width: 400px; margin: 0 auto; display: block; clip-path: inset(0 0 48% 0);">
+						<img src="/images/chartosaur4.png" alt="Chartosaur - Show the point" class="fragment" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
+					</div>
 				</section>
 				<section>
-					<img src="/images/chartosaur5.png" alt="Chartosaur" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
+					<div class="r-stack">
+						<img src="/images/chartosaur5.png" alt="Chartosaur - Show the data" style="width: 100%; max-width: 400px; margin: 0 auto; display: block; clip-path: inset(0 0 48% 0);">
+						<img src="/images/chartosaur5.png" alt="Chartosaur - Show the variability" class="fragment" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
+					</div>
 				</section>
 				<section>
-					<img src="/images/chartosaur6.png" alt="Chartosaur" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
+					<div class="r-stack">
+						<img src="/images/chartosaur6.png" alt="Chartosaur - Show the data" style="width: 100%; max-width: 400px; margin: 0 auto; display: block; clip-path: inset(0 0 48% 0);">
+						<img src="/images/chartosaur6.png" alt="Chartosaur - Show the difference" class="fragment" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
+					</div>
 				</section>
 
 				<section data-background-iframe="https://pudding.cool" data-background-interactive>
@@ -313,15 +340,15 @@ svg.selectAll("rect")
 					<h2>D3.js vs. Observable vs. Observable Plot</h2>
 					<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7em; font-size: 0.75em;">
 						<div style="background: rgba(80,250,123,0.1); border: 1px solid rgba(80,250,123,0.3); border-radius: 6px; padding: 0.8em;">
-							<p style="color: #50fa7b; margin-bottom: 0.4em;"><strong>D3.js</strong></p>
+							<p style="color: #50fa7b; margin-bottom: 0.4em;"><strong><a href="https://d3js.org/" target="_blank">D3.js</a></strong></p>
 							<p>Flexible, but more boilerplate.<br>Ideal for custom visualizations.</p>
 						</div>
 						<div style="background: rgba(139,233,253,0.1); border: 1px solid rgba(139,233,253,0.3); border-radius: 6px; padding: 0.8em;">
-							<p style="color: #8be9fd; margin-bottom: 0.4em;"><strong>Observable</strong></p>
+							<p style="color: #8be9fd; margin-bottom: 0.4em;"><strong><a href="https://observablehq.com/" target="_blank">Observable</a></strong></p>
 							<p>Interactive notebooks with D3 integration.<br>Perfect for prototyping & sharing.</p>
 						</div>
 						<div style="background: rgba(255,184,108,0.1); border: 1px solid rgba(255,184,108,0.3); border-radius: 6px; padding: 0.8em;">
-							<p style="color: #ffb86c; margin-bottom: 0.4em;"><strong>Observable Plot</strong></p>
+							<p style="color: #ffb86c; margin-bottom: 0.4em;"><strong><a href="https://observablehq.com/plot/" target="_blank">Observable Plot</a></strong></p>
 							<p>High-quality charts with minimal code.<br>Great for quick analysis & standard charts.</p>
 						</div>
 				</section>
@@ -474,7 +501,7 @@ svg.selectAll("rect")
 						</div>
 						<div class="fragment" style="padding: 0.4em 0.6em; border-left: 3px solid #8be9fd;">
 							<strong style="color: #8be9fd;">React</strong><br>
-							<a href="https://recharts.org/">Recharts</a> · <a href="https://nivo.rocks/">Nivo</a> · <a href="https://airbnb.io/visx/">visx</a>
+							<a href="https://recharts.org/">Recharts</a> · <a href="https://tremor.so/" target="_blank">Tremor</a>
 						</div>
 						<div class="fragment" style="padding: 0.4em 0.6em; border-left: 3px solid #ffb86c;">
 							<strong style="color: #ffb86c;">Agnostic</strong><br>
@@ -528,6 +555,7 @@ svg.selectAll("rect")
 					<p class="fragment" style="font-size: 0.85em; margin: 0.5em 0;">Custom viz → <a href="https://d3js.org/">D3.js</a> + Svelte/React</p>
 					<p class="fragment" style="font-size: 0.85em; margin: 0.5em 0;">Prototyping → <a href="https://observablehq.com/">Observable</a></p>
 					<p class="fragment" style="font-size: 0.85em; margin: 0.5em 0;">Learning → <a href="https://wattenberger.com/">Wattenberger</a>, <a href="https://www.youtube.com/@CurranKelleher">Curran Kelleher</a></p>
+					<p class="fragment" style="font-size: 0.85em; margin: 0.5em 0;">Practice → <a href="https://github.com/rfordatascience/tidytuesday?tab=readme-ov-file">TidyTuesday</a></p>
 
 					<aside class="notes">
 						My advice: just start. Observable is perfect for trying D3 without a build setup. Amelia Wattenberger's interactive guides are absolutely excellent for getting started.
