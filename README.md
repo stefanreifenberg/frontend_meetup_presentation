@@ -1,73 +1,122 @@
-# Three.js & WebGL Talk
+# Datenvisualisierung im Browser
 
-## 🎯 Ziel des Talks
-Ein einfacher Einstieg in die 3D-Grafik im Browser mit WebGL und Three.js. Dieser Vortrag richtet sich an Frontend-Entwickler, die die Möglichkeiten von WebGL erkunden möchten, ohne direkt mit der Komplexität der WebGL-API zu beginnen.
+**Freiburg Frontend Meetup** — Talk über Dataviz mit D3.js & Svelte
+
+## Links
+
+### Quick Reference
+
+- https://www.data-to-viz.com/
+- https://d3js.org/
+- https://observablehq.com/
+- https://observablehq.com/plot/
+- https://datavisualizationwithsvelte.com/
+- https://next.layerchart.com/
+- https://pudding.cool
+- https://www.datasketch.es/
+- https://truth-and-beauty.net/
+- https://www.dataviz-inspiration.com/
+
+---
 
 ## 🗓 Details
-- **Titel:** Einstieg in WebGL mit Three.js
-- **Ort:** Lokales Frontend Meetup
-- **Zielgruppe:** Entwickler mit Grundkenntnissen in JavaScript und Interesse an 3D-Visualisierung
 
-## 🚀 Installation und Ausführung
+- **Titel:** Datenvisualisierung im Browser — D3.js & Svelte
+- **Ort:** Freiburg Frontend Meetup
+- **Zielgruppe:** Entwickler mit JavaScript-Kenntnissen und Interesse an Dataviz
 
-### Voraussetzungen
-- Node.js (Version 18 oder höher)
-- npm (wird mit Node.js installiert)
+## 🚀 Installation
 
-### Schritte zur Installation
-1. Repository klonen:
-   ```bash
-   git clone https://github.com/stefanreifenberg/frontend_meetup_presentation.git
-   cd frontend_meetup_presentation
-   ```
+```bash
+# 1. Repository klonen
+git clone https://github.com/stefanreifenberg/frontend_meetup_dataviz.git
+cd frontend_meetup_dataviz
 
-2. Abhängigkeiten installieren:
-   ```bash
-   npm install
-   ```
+# 2. Abhängigkeiten installieren
+npm install
 
-3. Entwicklungsserver starten:
-   ```bash
-   npm start
-   ```
-
-4. Die Präsentation sollte nun unter `http://localhost:8000` verfügbar sein.
+# 3. Dev-Server starten
+npm start
+# → http://localhost:8000
+```
 
 ## 🔗 Ressourcen & Links
 
-### Core Technologien
-- [Three.js](https://threejs.org/) - Die Hauptbibliothek für 3D-Grafik im Browser
-- [WebGL API](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API) - Die zugrundeliegende WebGL-API
-- [WebGL Basic 2D Animation Example](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example) - Einfaches WebGL-Beispiel
+### Chart-Typ-Entscheidung
 
-### Beispiele & Inspiration
-- [Bruno Simon Portfolio](https://bruno-simon.com/) - Beeindruckendes 3D-Portfolio
-- [Corn Revolution](https://cornrevolution.resn.global/#science) - Interaktive 3D-Experience
-- [Lusion](https://lusion.co/) - Kreative 3D-Webseite
-- [Prior Ambition](https://prior.co.jp/discover/en/ambition) - Interaktive 3D-Präsentation
-- [Chartogne-Taillet](https://chartogne-taillet.com/en) - 3D-Webseite für Wein
-- [Midwam](https://www.midwam.com/en/) - 3D-Webseite
-- [Dala](https://dala.craftedbygc.com/) - Interaktive 3D-Experience
-- [Freiburg Noise](https://freiburg-noise.vercel.app/) - Lokales 3D-Projekt
-- [Three Satellites](https://three-satellites.vercel.app/) - 3D-Satelliten-Visualisierung
-- [R3F Physics](https://r3f-physics-omega.vercel.app/) - Physik-basierte 3D-Animation
+- [data-to-viz.com](https://www.data-to-viz.com/) — Interaktiver Entscheidungsbaum: Datenstruktur → passende Charts
 
-### Frameworks & Tools
-- [React Three Fiber](https://r3f.docs.pmnd.rs/getting-started/introduction) - React-Renderer für Three.js
-- [Threlte](https://threlte.xyz/) - Three.js für Svelte
-- [TresJS](https://tresjs.org/) - Three.js für Vue
-- [Angular Three](https://angularthree.org/) - Three.js für Angular
+### Core Libraries
+
+- [D3.js](https://d3js.org/) — Data-Driven Documents, das Standard-Ökosystem für Dataviz
+- [Observable](https://observablehq.com/) — Interaktive Notebooks mit D3-Integration, perfekt fürs Prototyping
+- [Observable Plot](https://observablehq.com/plot/) — Hochwertige Charts mit minimalem Code
+
+### Svelte + D3
+
+- [Data Visualization with Svelte](https://datavisualizationwithsvelte.com/) — Kurs & Ressourcen
+- [LayerChart](https://next.layerchart.com/) — Deklarative Chart-Komponenten für Svelte + D3
+
+### Chart Libraries
+
+- [Recharts](https://recharts.org/) — React
+- [Tremor](https://tremor.so/) — React
+- [Chart.js](https://www.chartjs.org/) — Framework-agnostisch
+- [ECharts](https://echarts.apache.org/) — Framework-agnostisch
+- [Deck.gl](https://deck.gl/) — Geo & große Datensätze
+- [Three.js](https://threejs.org/) — 3D / WebGL
+- [Highcharts](https://www.highcharts.com/) — Kommerziell, umfangreich
+
+### Maps & Projektionen
+
+- [geo-projections.com](https://www.geo-projections.com/) — Interaktive Übersicht aller D3-Geodaten-Projektionen
+
+### Storytelling & Inspiration
+
+- [The Pudding](https://pudding.cool) — Visual Essays, Scrollytelling auf höchstem Niveau
+- [Datasketch.es](https://www.datasketch.es/) — Shirley Wu, Dataviz als Kunst
+- [Truth and Beauty](https://truth-and-beauty.net/) — Moritz Stefaner, interaktive Datenprojekte
+- [Dataviz Inspiration](https://www.dataviz-inspiration.com/) — Kuratierte Galerie außergewöhnlicher Visualisierungen
+
+- [Tracing the K-pop Wave](https://visualrambling.space/tracing-kpop-wave/) — Visual Rambling, scrollytelling Dataviz-Projekt
+- [Bartosz Ciechanowski](https://ciechanow.ski/) — Interaktive visuelle Erklärungen komplexer Konzepte
+- [Narrative Flow Study](https://narrative-flow.github.io/exploratory-study-2/) — Forschungsprojekt zu narrativen Visualisierungen
+- [MIT Senseable City Lab](https://senseable.mit.edu/) — Urbane Datenvisualisierung & Stadtforschung
+- [ACLED](https://acleddata.com/) — Armed Conflict Location & Event Data, Geodaten zu Konflikten
+- [Geodaten Freiburg](https://geodaten.freiburg.de/geonetwork/srv/eng/catalog.search#/metadata/c72bdf7a-9840-4ba0-ae95-8369d7687ba7) — Offene Geodaten der Stadt Freiburg
+
+### Dataviz Studios
+
+- [Clever°Franke](https://www.cleverfranke.com/)
+- [Interactive Things](https://www.interactivethings.com/)
+- [Dataveyes](https://dataveyes.com/en)
+- [webkid](https://webkid.io/)
+- [Dala](https://dala.craftedbygc.com/)
+- [Nand](https://www.nand.io/)
+- [Schema Design](https://www.schemadesign.com/)
+- [Superdot Studio](https://www.superdot.studio/en)
+- [Accurat](https://www.accurat.it/)
 
 ### Lernressourcen
-- [Three.js Journey](https://threejs-journey.com/) - Umfassender Three.js-Kurs
-- [Robot Bobby YouTube](https://www.youtube.com/@robotbobby9) - Three.js Tutorials
-- [Yuri Artiukh YouTube](https://www.youtube.com/@akella_) - Three.js Tutorials
-- [Three.js Documentation](https://threejs.org/docs/) - Offizielle Dokumentation
-- [Three.js Resources](https://threejsresources.com/) - Sammlung von Ressourcen
-- [Three.js Discord](https://discord.gg/Xg7KGcgG) - Community-Support
 
-### Tools & Bibliotheken
-- [Leva](https://github.com/pmndrs/leva) - Debugging-Tool
-- [R3F Perf](https://codesandbox.io/p/sandbox/perlin-cubes-r3f-perf-wtp9t?file=%2Fsrc%2FApp.js) - Performance-Monitoring
-- [Three.js Tips & Tricks](https://discoverthreejs.com/tips-and-tricks/) - Performance-Optimierung
+- [Open Visualization Academy](https://openvisualizationacademy.org/) — Strukturierter Einstieg in Dataviz
+- [Wattenberger](https://wattenberger.com/) — Interaktive D3-Guides von Amelia Wattenberger
+- [Curran Kelleher YouTube](https://www.youtube.com/@CurranKelleher) — D3-Tutorials
+- [EDA in R (R4DS)](https://r4ds.had.co.nz/exploratory-data-analysis.html) — Exploratory Data Analysis
+
+### Übungsdaten
+
+- [TidyTuesday](https://github.com/rfordatascience/tidytuesday?tab=readme-ov-file) — Wöchentliche Datensätze zum Üben
+
+### Observable Embeds (aus dem Talk)
+
+- [Circle Packing](https://observablehq.com/@d3/pack/2) — d3.pack()
+- [Force-directed Graph](https://observablehq.com/d/fcbc77e23fbd958c) — d3.forceSimulation()
+- [Sankey Diagram](https://observablehq.com/@d3/sankey/2) — Flows & Flüsse
+- [Hierarchical Edge Bundling](https://observablehq.com/@d3/hierarchical-edge-bundling/2) — Komplexe Verbindungen
+
+### Eigene Projekte
+
+- [Freiburg Trees](https://freiburg-trees.vercel.app/)
+- [stefanreifenberg.com](https://stefanreifenberg.com)
 
